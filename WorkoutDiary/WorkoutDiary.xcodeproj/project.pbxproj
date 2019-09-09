@@ -13,8 +13,8 @@
 		3663CE4723268B66009E8BCC /* WorkoutPlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3663CE4523268B66009E8BCC /* WorkoutPlan.xcdatamodeld */; };
 		3663CE4923268B66009E8BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3663CE4823268B66009E8BCC /* Assets.xcassets */; };
 		3663CE4C23268B66009E8BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3663CE4A23268B66009E8BCC /* LaunchScreen.storyboard */; };
-		3663CE5723268B66009E8BCC /* WorkoutPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663CE5623268B66009E8BCC /* WorkoutPlanTests.swift */; };
-		3663CE6223268B66009E8BCC /* WorkoutPlanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663CE6123268B66009E8BCC /* WorkoutPlanUITests.swift */; };
+		3663CE5723268B66009E8BCC /* WorkoutDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663CE5623268B66009E8BCC /* WorkoutDiaryTests.swift */; };
+		3663CE6223268B66009E8BCC /* WorkoutDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663CE6123268B66009E8BCC /* WorkoutDiaryUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3663CE3B23268B66009E8BCC /* WorkoutPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3663CE3B23268B66009E8BCC /* WorkoutDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3663CE3E23268B66009E8BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3663CE4023268B66009E8BCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3663CE4323268B66009E8BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,11 +43,11 @@
 		3663CE4823268B66009E8BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3663CE4B23268B66009E8BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3663CE4D23268B66009E8BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3663CE5223268B66009E8BCC /* WorkoutPlanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutPlanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3663CE5623268B66009E8BCC /* WorkoutPlanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanTests.swift; sourceTree = "<group>"; };
+		3663CE5223268B66009E8BCC /* WorkoutDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3663CE5623268B66009E8BCC /* WorkoutDiaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryTests.swift; sourceTree = "<group>"; };
 		3663CE5823268B66009E8BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3663CE5D23268B66009E8BCC /* WorkoutPlanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutPlanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3663CE6123268B66009E8BCC /* WorkoutPlanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanUITests.swift; sourceTree = "<group>"; };
+		3663CE5D23268B66009E8BCC /* WorkoutDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3663CE6123268B66009E8BCC /* WorkoutDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryUITests.swift; sourceTree = "<group>"; };
 		3663CE6323268B66009E8BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,9 +79,9 @@
 		3663CE3223268B66009E8BCC = {
 			isa = PBXGroup;
 			children = (
-				3663CE3D23268B66009E8BCC /* WorkoutPlan */,
-				3663CE5523268B66009E8BCC /* WorkoutPlanTests */,
-				3663CE6023268B66009E8BCC /* WorkoutPlanUITests */,
+				3663CE3D23268B66009E8BCC /* WorkoutDiary */,
+				3663CE5523268B66009E8BCC /* WorkoutDiaryTests */,
+				3663CE6023268B66009E8BCC /* WorkoutDiaryUITests */,
 				3663CE3C23268B66009E8BCC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,14 +89,14 @@
 		3663CE3C23268B66009E8BCC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3663CE3B23268B66009E8BCC /* WorkoutPlan.app */,
-				3663CE5223268B66009E8BCC /* WorkoutPlanTests.xctest */,
-				3663CE5D23268B66009E8BCC /* WorkoutPlanUITests.xctest */,
+				3663CE3B23268B66009E8BCC /* WorkoutDiary.app */,
+				3663CE5223268B66009E8BCC /* WorkoutDiaryTests.xctest */,
+				3663CE5D23268B66009E8BCC /* WorkoutDiaryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3663CE3D23268B66009E8BCC /* WorkoutPlan */ = {
+		3663CE3D23268B66009E8BCC /* WorkoutDiary */ = {
 			isa = PBXGroup;
 			children = (
 				3663CE3E23268B66009E8BCC /* AppDelegate.swift */,
@@ -107,33 +107,33 @@
 				3663CE4D23268B66009E8BCC /* Info.plist */,
 				3663CE4523268B66009E8BCC /* WorkoutPlan.xcdatamodeld */,
 			);
-			path = WorkoutPlan;
+			path = WorkoutDiary;
 			sourceTree = "<group>";
 		};
-		3663CE5523268B66009E8BCC /* WorkoutPlanTests */ = {
+		3663CE5523268B66009E8BCC /* WorkoutDiaryTests */ = {
 			isa = PBXGroup;
 			children = (
-				3663CE5623268B66009E8BCC /* WorkoutPlanTests.swift */,
+				3663CE5623268B66009E8BCC /* WorkoutDiaryTests.swift */,
 				3663CE5823268B66009E8BCC /* Info.plist */,
 			);
-			path = WorkoutPlanTests;
+			path = WorkoutDiaryTests;
 			sourceTree = "<group>";
 		};
-		3663CE6023268B66009E8BCC /* WorkoutPlanUITests */ = {
+		3663CE6023268B66009E8BCC /* WorkoutDiaryUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3663CE6123268B66009E8BCC /* WorkoutPlanUITests.swift */,
+				3663CE6123268B66009E8BCC /* WorkoutDiaryUITests.swift */,
 				3663CE6323268B66009E8BCC /* Info.plist */,
 			);
-			path = WorkoutPlanUITests;
+			path = WorkoutDiaryUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3663CE3A23268B66009E8BCC /* WorkoutPlan */ = {
+		3663CE3A23268B66009E8BCC /* WorkoutDiary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3663CE6623268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutPlan" */;
+			buildConfigurationList = 3663CE6623268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutDiary" */;
 			buildPhases = (
 				3663CE3723268B66009E8BCC /* Sources */,
 				3663CE3823268B66009E8BCC /* Frameworks */,
@@ -143,14 +143,14 @@
 			);
 			dependencies = (
 			);
-			name = WorkoutPlan;
+			name = WorkoutDiary;
 			productName = WorkoutPlan;
-			productReference = 3663CE3B23268B66009E8BCC /* WorkoutPlan.app */;
+			productReference = 3663CE3B23268B66009E8BCC /* WorkoutDiary.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3663CE5123268B66009E8BCC /* WorkoutPlanTests */ = {
+		3663CE5123268B66009E8BCC /* WorkoutDiaryTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3663CE6923268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutPlanTests" */;
+			buildConfigurationList = 3663CE6923268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutDiaryTests" */;
 			buildPhases = (
 				3663CE4E23268B66009E8BCC /* Sources */,
 				3663CE4F23268B66009E8BCC /* Frameworks */,
@@ -161,14 +161,14 @@
 			dependencies = (
 				3663CE5423268B66009E8BCC /* PBXTargetDependency */,
 			);
-			name = WorkoutPlanTests;
+			name = WorkoutDiaryTests;
 			productName = WorkoutPlanTests;
-			productReference = 3663CE5223268B66009E8BCC /* WorkoutPlanTests.xctest */;
+			productReference = 3663CE5223268B66009E8BCC /* WorkoutDiaryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3663CE5C23268B66009E8BCC /* WorkoutPlanUITests */ = {
+		3663CE5C23268B66009E8BCC /* WorkoutDiaryUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3663CE6C23268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutPlanUITests" */;
+			buildConfigurationList = 3663CE6C23268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutDiaryUITests" */;
 			buildPhases = (
 				3663CE5923268B66009E8BCC /* Sources */,
 				3663CE5A23268B66009E8BCC /* Frameworks */,
@@ -179,9 +179,9 @@
 			dependencies = (
 				3663CE5F23268B66009E8BCC /* PBXTargetDependency */,
 			);
-			name = WorkoutPlanUITests;
+			name = WorkoutDiaryUITests;
 			productName = WorkoutPlanUITests;
-			productReference = 3663CE5D23268B66009E8BCC /* WorkoutPlanUITests.xctest */;
+			productReference = 3663CE5D23268B66009E8BCC /* WorkoutDiaryUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3663CE3623268B66009E8BCC /* Build configuration list for PBXProject "WorkoutPlan" */;
+			buildConfigurationList = 3663CE3623268B66009E8BCC /* Build configuration list for PBXProject "WorkoutDiary" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -220,9 +220,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3663CE3A23268B66009E8BCC /* WorkoutPlan */,
-				3663CE5123268B66009E8BCC /* WorkoutPlanTests */,
-				3663CE5C23268B66009E8BCC /* WorkoutPlanUITests */,
+				3663CE3A23268B66009E8BCC /* WorkoutDiary */,
+				3663CE5123268B66009E8BCC /* WorkoutDiaryTests */,
+				3663CE5C23268B66009E8BCC /* WorkoutDiaryUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3663CE5723268B66009E8BCC /* WorkoutPlanTests.swift in Sources */,
+				3663CE5723268B66009E8BCC /* WorkoutDiaryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3663CE6223268B66009E8BCC /* WorkoutPlanUITests.swift in Sources */,
+				3663CE6223268B66009E8BCC /* WorkoutDiaryUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +286,12 @@
 /* Begin PBXTargetDependency section */
 		3663CE5423268B66009E8BCC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3663CE3A23268B66009E8BCC /* WorkoutPlan */;
+			target = 3663CE3A23268B66009E8BCC /* WorkoutDiary */;
 			targetProxy = 3663CE5323268B66009E8BCC /* PBXContainerItemProxy */;
 		};
 		3663CE5F23268B66009E8BCC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3663CE3A23268B66009E8BCC /* WorkoutPlan */;
+			target = 3663CE3A23268B66009E8BCC /* WorkoutDiary */;
 			targetProxy = 3663CE5E23268B66009E8BCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -438,12 +438,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NRU5YEF35L;
-				INFOPLIST_FILE = WorkoutPlan/Info.plist;
+				INFOPLIST_FILE = WorkoutDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.WorkoutPlan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.WorkoutDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -456,12 +456,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NRU5YEF35L;
-				INFOPLIST_FILE = WorkoutPlan/Info.plist;
+				INFOPLIST_FILE = WorkoutDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.WorkoutPlan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.WorkoutDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,7 +485,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkoutPlan.app/WorkoutPlan";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkoutDiary.app/WorkoutDiary";
 			};
 			name = Debug;
 		};
@@ -506,7 +506,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkoutPlan.app/WorkoutPlan";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkoutDiary.app/WorkoutDiary";
 			};
 			name = Release;
 		};
@@ -553,7 +553,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3663CE3623268B66009E8BCC /* Build configuration list for PBXProject "WorkoutPlan" */ = {
+		3663CE3623268B66009E8BCC /* Build configuration list for PBXProject "WorkoutDiary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3663CE6423268B66009E8BCC /* Debug */,
@@ -562,7 +562,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3663CE6623268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutPlan" */ = {
+		3663CE6623268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutDiary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3663CE6723268B66009E8BCC /* Debug */,
@@ -571,7 +571,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3663CE6923268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutPlanTests" */ = {
+		3663CE6923268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutDiaryTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3663CE6A23268B66009E8BCC /* Debug */,
@@ -580,7 +580,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3663CE6C23268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutPlanUITests" */ = {
+		3663CE6C23268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutDiaryUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3663CE6D23268B66009E8BCC /* Debug */,

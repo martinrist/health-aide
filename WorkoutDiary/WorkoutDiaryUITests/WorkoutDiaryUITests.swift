@@ -1,6 +1,6 @@
 //
-//  WorkoutPlanUITests.swift
-//  WorkoutPlanUITests
+//  WorkoutDiaryUITests.swift
+//  WorkoutDiaryUITests
 //
 //  Created by Martin Rist on 09/09/2019.
 //  Copyright © 2019 Martin Rist. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class WorkoutPlanUITests: XCTestCase {
+class WorkoutDiaryUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
