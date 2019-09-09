@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3663CE3A23268B66009E8BCC"
-               BuildableName = "WorkoutPlan.app"
-               BlueprintName = "WorkoutPlan"
-               ReferencedContainer = "container:WorkoutPlan.xcodeproj">
+               BuildableName = "WorkoutDiary.app"
+               BlueprintName = "WorkoutDiary"
+               ReferencedContainer = "container:WorkoutDiary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3663CE5123268B66009E8BCC"
-               BuildableName = "WorkoutPlanTests.xctest"
-               BlueprintName = "WorkoutPlanTests"
-               ReferencedContainer = "container:WorkoutPlan.xcodeproj">
+               BuildableName = "WorkoutDiaryTests.xctest"
+               BlueprintName = "WorkoutDiaryTests"
+               ReferencedContainer = "container:WorkoutDiary.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3663CE5C23268B66009E8BCC"
-               BuildableName = "WorkoutPlanUITests.xctest"
-               BlueprintName = "WorkoutPlanUITests"
-               ReferencedContainer = "container:WorkoutPlan.xcodeproj">
+               BuildableName = "WorkoutDiaryUITests.xctest"
+               BlueprintName = "WorkoutDiaryUITests"
+               ReferencedContainer = "container:WorkoutDiary.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3663CE3A23268B66009E8BCC"
-            BuildableName = "WorkoutPlan.app"
-            BlueprintName = "WorkoutPlan"
-            ReferencedContainer = "container:WorkoutPlan.xcodeproj">
+            BuildableName = "WorkoutDiary.app"
+            BlueprintName = "WorkoutDiary"
+            ReferencedContainer = "container:WorkoutDiary.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3663CE3A23268B66009E8BCC"
-            BuildableName = "WorkoutPlan.app"
-            BlueprintName = "WorkoutPlan"
-            ReferencedContainer = "container:WorkoutPlan.xcodeproj">
+            BuildableName = "WorkoutDiary.app"
+            BlueprintName = "WorkoutDiary"
+            ReferencedContainer = "container:WorkoutDiary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3663CE3A23268B66009E8BCC"
-            BuildableName = "WorkoutPlan.app"
-            BlueprintName = "WorkoutPlan"
-            ReferencedContainer = "container:WorkoutPlan.xcodeproj">
+            BuildableName = "WorkoutDiary.app"
+            BlueprintName = "WorkoutDiary"
+            ReferencedContainer = "container:WorkoutDiary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
