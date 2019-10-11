@@ -74,6 +74,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3643224F2350974000A5A7E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3663CE4223268B66009E8BCC /* Main.storyboard */,
+				3663CE4A23268B66009E8BCC /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		364322502350974F00A5A7E2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3663CE4023268B66009E8BCC /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		364322512350975400A5A7E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		364322522350976800A5A7E2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				3663CE3E23268B66009E8BCC /* AppDelegate.swift */,
+				3663CE4D23268B66009E8BCC /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		364322532350977600A5A7E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3663CE4823268B66009E8BCC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3663CE3223268B66009E8BCC = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +138,11 @@
 		3663CE3D23268B66009E8BCC /* WorkoutDiary */ = {
 			isa = PBXGroup;
 			children = (
-				3663CE3E23268B66009E8BCC /* AppDelegate.swift */,
-				3663CE4023268B66009E8BCC /* ViewController.swift */,
-				3663CE4223268B66009E8BCC /* Main.storyboard */,
-				3663CE4823268B66009E8BCC /* Assets.xcassets */,
-				3663CE4A23268B66009E8BCC /* LaunchScreen.storyboard */,
-				3663CE4D23268B66009E8BCC /* Info.plist */,
+				3643224F2350974000A5A7E2 /* Views */,
+				364322502350974F00A5A7E2 /* Controllers */,
+				364322512350975400A5A7E2 /* Model */,
+				364322532350977600A5A7E2 /* Resources */,
+				364322522350976800A5A7E2 /* Support */,
 			);
 			path = WorkoutDiary;
 			sourceTree = "<group>";
@@ -434,7 +474,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NRU5YEF35L;
-				INFOPLIST_FILE = WorkoutDiary/Info.plist;
+				INFOPLIST_FILE = WorkoutDiary/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NRU5YEF35L;
-				INFOPLIST_FILE = WorkoutDiary/Info.plist;
+				INFOPLIST_FILE = WorkoutDiary/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
