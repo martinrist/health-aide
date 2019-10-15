@@ -12,11 +12,9 @@ class ExerciseListViewController: UITableViewController {
 
   // MARK: - Segue Identifiers
 
-  // TODO: Should this be here or in the destination VC?
   enum SegueIdentifier: String {
     case addExercise
   }
-
 
   // MARK: - Cell Reuse Identifiers
 

@@ -21,6 +21,6 @@ class DataModelTests: XCTestCase {
   }
 
   func testDataModel_ContainsExpectedTestData() {
-    XCTAssert(sut.exercises.count == 20)
+    XCTAssert(sut.exercises.count == 5)
   }
 }

@@ -25,6 +25,7 @@ class ExerciseDetailViewController: UITableViewController {
 
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var descriptionTextField: UITextField!
+  @IBOutlet weak var doneBarButton: UIBarButtonItem!
 
   // MARK: - Lifecycle
 
@@ -59,5 +60,25 @@ extension ExerciseDetailViewController {
                           willSelectRowAt indexPath: IndexPath) -> IndexPath? {
     // Prevents the rows behind the text fields being selected
     return nil
+  }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension ExerciseDetailViewController: UITextFieldDelegate {
+
+  func textField(_ textField: UITextField,
+                 shouldChangeCharactersIn range: NSRange,
+                 replacementString string: String) -> Bool {
+
+    // Work out what the 'new' text would be
+    let oldText = textField.text!
+    let stringRange = Range(range, in: oldText)!
+    let newText = oldText.replacingCharacters(in: stringRange, with: string)
+
+    // Disable the 'done' button if the new text is empty
+    doneBarButton.isEnabled = !newText.isEmpty
+
+    return true
   }
 }
