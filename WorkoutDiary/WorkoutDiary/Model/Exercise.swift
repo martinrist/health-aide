@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Exercise {
+class Exercise: Equatable {
 
   var name: String
   var description: String
@@ -16,6 +16,11 @@ class Exercise {
   init(name: String, description: String) {
     self.name = name
     self.description = description
+  }
+
+  static func == (lhs: Exercise, rhs: Exercise) -> Bool {
+    return lhs.name == rhs.name
+      && lhs.description == rhs.description
   }
 
 }

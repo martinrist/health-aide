@@ -14,6 +14,7 @@ class ExerciseListViewController: UITableViewController {
 
   enum SegueIdentifier: String {
     case addExercise
+    case editExercise
   }
 
   // MARK: - Cell Reuse Identifiers
@@ -64,10 +65,20 @@ extension ExerciseListViewController {
       let identifier = ExerciseListViewController.SegueIdentifier(rawValue: identString) else { return }
 
     switch identifier {
+
     case .addExercise:
       // swiftlint:disable:next force_cast
       let controller = segue.destination as! ExerciseDetailViewController
       controller.delegate = self
+
+    case .editExercise:
+      // swiftlint:disable:next force_cast
+      let controller = segue.destination as! ExerciseDetailViewController
+      controller.delegate = self
+      if let sender = sender as? UITableViewCell,
+        let indexPath = tableView.indexPath(for: sender) {
+        controller.exerciseToEdit = dataModel.exercises[indexPath.row]
+      }
     }
   }
 }
@@ -80,10 +91,11 @@ extension ExerciseListViewController: ExerciseDetailViewControllerDelegate {
     navigationController?.popViewController(animated: true)
   }
 
-  func exerciseDetailViewController(_ controller: ExerciseDetailViewController, didFinishAdding item: Exercise) {
+  func exerciseDetailViewController(_ controller: ExerciseDetailViewController,
+                                    didFinishAdding exercise: Exercise) {
 
     // Update data model
-    dataModel.exercises.append(item)
+    dataModel.exercises.append(exercise)
 
     // Update view
     let newRowIndex = dataModel.exercises.count - 1
@@ -94,4 +106,18 @@ extension ExerciseListViewController: ExerciseDetailViewControllerDelegate {
     navigationController?.popViewController(animated: true)
   }
 
+  func exerciseDetailViewController(_ controller: ExerciseDetailViewController,
+                                    didFinishEditing exercise: Exercise) {
+
+    // Update view
+    if let index = dataModel.exercises.firstIndex(of: exercise) {
+      let indexPath = IndexPath(row: index, section: 0)
+      if let cell = tableView.cellForRow(at: indexPath) {
+        configureCell(cell, with: exercise)
+      }
+    }
+
+    // Pop the 'edit' screen off
+    navigationController?.popViewController(animated: true)
+  }
 }
