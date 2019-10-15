@@ -46,11 +46,105 @@
                             <outlet property="delegate" destination="4n7-pR-f29" id="dm0-En-aBQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Exercises" largeTitleDisplayMode="always" id="2WM-P9-Wu0"/>
+                    <navigationItem key="navigationItem" title="Exercises" largeTitleDisplayMode="always" id="2WM-P9-Wu0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WG1-es-z7h">
+                            <connections>
+                                <segue destination="ZI0-ce-YCW" kind="show" identifier="addExercise" id="ig7-iH-GE0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaB-FJ-T5K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1102.8985507246377" y="136.60714285714286"/>
+        </scene>
+        <!--Add Exercise-->
+        <scene sceneID="nD4-77-k1X">
+            <objects>
+                <tableViewController id="ZI0-ce-YCW" customClass="ExerciseDetailViewController" customModule="WorkoutDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Olc-jz-XdX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Details" id="ze4-U9-sRL">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MHM-u3-5Ku">
+                                        <rect key="frame" x="0.0" y="90.5" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MHM-u3-5Ku" id="A1X-IQ-Tkn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of the exercise" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfY-om-lll">
+                                                    <rect key="frame" x="8" y="5" width="359" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="done:" destination="ZI0-ce-YCW" eventType="editingDidEndOnExit" id="oqW-A2-Qb6"/>
+                                                        <outlet property="delegate" destination="ZI0-ce-YCW" id="GF2-vf-yF4"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="pfY-om-lll" secondAttribute="trailing" constant="8" id="E3Q-pv-oej"/>
+                                                <constraint firstItem="pfY-om-lll" firstAttribute="centerY" secondItem="A1X-IQ-Tkn" secondAttribute="centerY" id="JcD-ww-NWF"/>
+                                                <constraint firstItem="pfY-om-lll" firstAttribute="leading" secondItem="A1X-IQ-Tkn" secondAttribute="leading" constant="8" id="yuF-NK-Fee"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="y6f-xt-MNV">
+                                        <rect key="frame" x="0.0" y="134" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y6f-xt-MNV" id="Ni1-20-I28">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description of the exercise" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hy1-sk-bAm">
+                                                    <rect key="frame" x="8" y="5" width="359" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="done:" destination="ZI0-ce-YCW" eventType="editingDidEndOnExit" id="5ci-4P-5tj"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="hy1-sk-bAm" secondAttribute="trailing" constant="8" id="S21-WT-Z1s"/>
+                                                <constraint firstItem="hy1-sk-bAm" firstAttribute="centerY" secondItem="Ni1-20-I28" secondAttribute="centerY" id="Tda-b2-baE"/>
+                                                <constraint firstItem="hy1-sk-bAm" firstAttribute="leading" secondItem="Ni1-20-I28" secondAttribute="leading" constant="8" id="lO9-eb-UET"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ZI0-ce-YCW" id="XEP-DL-fN2"/>
+                            <outlet property="delegate" destination="ZI0-ce-YCW" id="LdV-XX-yxn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Exercise" largeTitleDisplayMode="never" id="roT-Ra-6W2">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="iXj-8w-66i">
+                            <connections>
+                                <action selector="cancel:" destination="ZI0-ce-YCW" id="smi-CE-C3p"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="8Rv-Pq-Dfg">
+                            <connections>
+                                <action selector="done:" destination="ZI0-ce-YCW" id="Ywb-gf-3IJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="hy1-sk-bAm" id="0QA-DW-Ozz"/>
+                        <outlet property="doneBarButton" destination="8Rv-Pq-Dfg" id="RbJ-3f-iXp"/>
+                        <outlet property="nameTextField" destination="pfY-om-lll" id="j5L-sq-4XW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRr-9S-9WL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1997" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="whf-bq-09i">
