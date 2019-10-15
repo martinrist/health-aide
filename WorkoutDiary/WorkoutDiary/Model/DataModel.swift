@@ -27,7 +27,7 @@ extension DataModel {
 
   func loadExercises() {
     // For now, just populate with dummy test data
-    exercises = (1...20).map {
+    exercises = (1...5).map {
       Exercise(name: "Exercise \($0)", description: "Description of Exercise \($0)")
     }
   }
