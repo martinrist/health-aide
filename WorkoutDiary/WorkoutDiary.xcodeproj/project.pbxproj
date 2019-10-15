@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3610BE712355E98100BC3EFF /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE702355E98100BC3EFF /* Exercise.swift */; };
+		3610BE732355EA6C00BC3EFF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE722355EA6C00BC3EFF /* DataModel.swift */; };
+		3610BE752355ECDD00BC3EFF /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE742355ECDD00BC3EFF /* ExerciseListViewController.swift */; };
+		3610BE772355F2FA00BC3EFF /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE762355F2FA00BC3EFF /* DataModelTests.swift */; };
+		3610BE782355F31D00BC3EFF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE722355EA6C00BC3EFF /* DataModel.swift */; };
+		3610BE792355F35D00BC3EFF /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE702355E98100BC3EFF /* Exercise.swift */; };
 		3663CE3F23268B66009E8BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663CE3E23268B66009E8BCC /* AppDelegate.swift */; };
-		3663CE4123268B66009E8BCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663CE4023268B66009E8BCC /* ViewController.swift */; };
 		3663CE4423268B66009E8BCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3663CE4223268B66009E8BCC /* Main.storyboard */; };
 		3663CE4923268B66009E8BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3663CE4823268B66009E8BCC /* Assets.xcassets */; };
 		3663CE4C23268B66009E8BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3663CE4A23268B66009E8BCC /* LaunchScreen.storyboard */; };
-		3663CE5723268B66009E8BCC /* WorkoutDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663CE5623268B66009E8BCC /* WorkoutDiaryTests.swift */; };
 		3663CE6223268B66009E8BCC /* WorkoutDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663CE6123268B66009E8BCC /* WorkoutDiaryUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,15 +38,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3610BE702355E98100BC3EFF /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = WorkoutDiary/Model/Exercise.swift; sourceTree = SOURCE_ROOT; };
+		3610BE722355EA6C00BC3EFF /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		3610BE742355ECDD00BC3EFF /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
+		3610BE762355F2FA00BC3EFF /* DataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelTests.swift; sourceTree = "<group>"; };
 		3663CE3B23268B66009E8BCC /* WorkoutDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3663CE3E23268B66009E8BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3663CE4023268B66009E8BCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3663CE4323268B66009E8BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3663CE4823268B66009E8BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3663CE4B23268B66009E8BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3663CE4D23268B66009E8BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3663CE5223268B66009E8BCC /* WorkoutDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3663CE5623268B66009E8BCC /* WorkoutDiaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryTests.swift; sourceTree = "<group>"; };
 		3663CE5823268B66009E8BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3663CE5D23268B66009E8BCC /* WorkoutDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3663CE6123268B66009E8BCC /* WorkoutDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryUITests.swift; sourceTree = "<group>"; };
@@ -86,7 +92,7 @@
 		364322502350974F00A5A7E2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3663CE4023268B66009E8BCC /* ViewController.swift */,
+				3610BE742355ECDD00BC3EFF /* ExerciseListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -94,6 +100,8 @@
 		364322512350975400A5A7E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3610BE702355E98100BC3EFF /* Exercise.swift */,
+				3610BE722355EA6C00BC3EFF /* DataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,8 +158,8 @@
 		3663CE5523268B66009E8BCC /* WorkoutDiaryTests */ = {
 			isa = PBXGroup;
 			children = (
-				3663CE5623268B66009E8BCC /* WorkoutDiaryTests.swift */,
 				3663CE5823268B66009E8BCC /* Info.plist */,
+				3610BE762355F2FA00BC3EFF /* DataModelTests.swift */,
 			);
 			path = WorkoutDiaryTests;
 			sourceTree = "<group>";
@@ -173,9 +181,9 @@
 			buildConfigurationList = 3663CE6623268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutDiary" */;
 			buildPhases = (
 				3663CE3723268B66009E8BCC /* Sources */,
+				364322592350C33E00A5A7E2 /* Run Swiftlint */,
 				3663CE3823268B66009E8BCC /* Frameworks */,
 				3663CE3923268B66009E8BCC /* Resources */,
-				364322592350C33E00A5A7E2 /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -318,8 +326,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3663CE4123268B66009E8BCC /* ViewController.swift in Sources */,
+				3610BE752355ECDD00BC3EFF /* ExerciseListViewController.swift in Sources */,
+				3610BE732355EA6C00BC3EFF /* DataModel.swift in Sources */,
 				3663CE3F23268B66009E8BCC /* AppDelegate.swift in Sources */,
+				3610BE712355E98100BC3EFF /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +337,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3663CE5723268B66009E8BCC /* WorkoutDiaryTests.swift in Sources */,
+				3610BE792355F35D00BC3EFF /* Exercise.swift in Sources */,
+				3610BE772355F2FA00BC3EFF /* DataModelTests.swift in Sources */,
+				3610BE782355F31D00BC3EFF /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
