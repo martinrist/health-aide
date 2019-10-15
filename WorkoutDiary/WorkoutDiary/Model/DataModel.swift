@@ -26,10 +26,7 @@ class DataModel {
 extension DataModel {
 
   func loadExercises() {
-    // For now, just populate with dummy test data
-    exercises = (1...5).map {
-      Exercise(name: "Exercise \($0)", description: "Description of Exercise \($0)")
-    }
+    // No-op for now - just a stub where test data can be added
   }
 
 }

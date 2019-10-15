@@ -16,11 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exerciseCell" textLabel="3VV-Kb-xaF" detailTextLabel="cNs-S0-SOz" style="IBUITableViewCellStyleSubtitle" id="OfV-ON-9jL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exerciseCell" textLabel="3VV-Kb-xaF" detailTextLabel="cNs-S0-SOz" style="IBUITableViewCellStyleSubtitle" id="OfV-ON-9jL">
                                 <rect key="frame" x="0.0" y="28" width="375" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OfV-ON-9jL" id="pBo-Qg-MWQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="316" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3VV-Kb-xaF">
@@ -39,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ZI0-ce-YCW" kind="show" identifier="editExercise" id="IEc-CR-Yh2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -76,8 +79,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of the exercise" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfY-om-lll">
-                                                    <rect key="frame" x="8" y="5" width="359" height="34"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the exercise" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfY-om-lll">
+                                                    <rect key="frame" x="16" y="13.5" width="343" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
@@ -87,9 +90,9 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="pfY-om-lll" secondAttribute="trailing" constant="8" id="E3Q-pv-oej"/>
+                                                <constraint firstAttribute="trailing" secondItem="pfY-om-lll" secondAttribute="trailing" constant="16" id="E3Q-pv-oej"/>
                                                 <constraint firstItem="pfY-om-lll" firstAttribute="centerY" secondItem="A1X-IQ-Tkn" secondAttribute="centerY" id="JcD-ww-NWF"/>
-                                                <constraint firstItem="pfY-om-lll" firstAttribute="leading" secondItem="A1X-IQ-Tkn" secondAttribute="leading" constant="8" id="yuF-NK-Fee"/>
+                                                <constraint firstItem="pfY-om-lll" firstAttribute="leading" secondItem="A1X-IQ-Tkn" secondAttribute="leading" constant="16" id="yuF-NK-Fee"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -100,8 +103,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description of the exercise" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hy1-sk-bAm">
-                                                    <rect key="frame" x="8" y="5" width="359" height="34"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description of the exercise" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hy1-sk-bAm">
+                                                    <rect key="frame" x="16" y="13.5" width="343" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
@@ -110,9 +113,9 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="hy1-sk-bAm" secondAttribute="trailing" constant="8" id="S21-WT-Z1s"/>
+                                                <constraint firstAttribute="trailing" secondItem="hy1-sk-bAm" secondAttribute="trailing" constant="16" id="S21-WT-Z1s"/>
                                                 <constraint firstItem="hy1-sk-bAm" firstAttribute="centerY" secondItem="Ni1-20-I28" secondAttribute="centerY" id="Tda-b2-baE"/>
-                                                <constraint firstItem="hy1-sk-bAm" firstAttribute="leading" secondItem="Ni1-20-I28" secondAttribute="leading" constant="8" id="lO9-eb-UET"/>
+                                                <constraint firstItem="hy1-sk-bAm" firstAttribute="leading" secondItem="Ni1-20-I28" secondAttribute="leading" constant="16" id="lO9-eb-UET"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -165,4 +168,8 @@
             <point key="canvasLocation" x="192.75362318840581" y="136.60714285714286"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ig7-iH-GE0"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

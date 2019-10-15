@@ -20,7 +20,7 @@ class DataModelTests: XCTestCase {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
   }
 
-  func testDataModel_ContainsExpectedTestData() {
-    XCTAssert(sut.exercises.count == 5)
+  func testDataModel_NewModel_ContainsNoData() {
+    XCTAssert(sut.exercises.count == 0)
   }
 }

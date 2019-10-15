@@ -11,7 +11,9 @@ import UIKit
 protocol ExerciseDetailViewControllerDelegate: class {
   func exerciseDetailViewControllerDidCancel(_ controller: ExerciseDetailViewController)
   func exerciseDetailViewController(_ controller: ExerciseDetailViewController,
-                                    didFinishAdding item: Exercise)
+                                    didFinishAdding exercise: Exercise)
+  func exerciseDetailViewController(_ controller: ExerciseDetailViewController,
+                                    didFinishEditing exercise: Exercise)
 }
 
 class ExerciseDetailViewController: UITableViewController {
@@ -31,6 +33,22 @@ class ExerciseDetailViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    if let exercise = exerciseToEdit {
+
+      // Set up view state for editing
+      title = "Edit exercise"
+      doneBarButton.isEnabled = true
+
+      // Copy model data into view
+      nameTextField.text = exercise.name
+      descriptionTextField.text = exercise.description
+
+    } else {
+
+      // Set up view state for adding
+      title = "Add exercise"
+    }
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -45,10 +63,25 @@ class ExerciseDetailViewController: UITableViewController {
   }
 
   @IBAction func done(_ sender: Any) {
-    let exercise = Exercise(name: nameTextField.text!,
-                            description: descriptionTextField.text!)
-    delegate?.exerciseDetailViewController(self,
-                                           didFinishAdding: exercise)
+
+    if let exercise = exerciseToEdit {
+
+      // Copy view state back into model
+      exercise.name = nameTextField.text!
+      exercise.description = descriptionTextField.text!
+
+      // Notify delegate of editing completion
+      delegate?.exerciseDetailViewController(self,
+                                             didFinishEditing: exercise)
+
+    } else {
+
+      // Create new exercise
+      let exercise = Exercise(name: nameTextField.text!,
+                              description: descriptionTextField.text!)
+      delegate?.exerciseDetailViewController(self,
+                                             didFinishAdding: exercise)
+    }
   }
 }
 
