@@ -26,7 +26,7 @@ class ExerciseDetailViewController: UITableViewController {
   // MARK: - Outlets
 
   @IBOutlet weak var nameTextField: UITextField!
-  @IBOutlet weak var descriptionTextField: UITextField!
+  @IBOutlet weak var descriptionTextView: UITextView!
   @IBOutlet weak var doneBarButton: UIBarButtonItem!
 
   // MARK: - Lifecycle
@@ -42,7 +42,7 @@ class ExerciseDetailViewController: UITableViewController {
 
       // Copy model data into view
       nameTextField.text = exercise.name
-      descriptionTextField.text = exercise.description
+      descriptionTextView.text = exercise.description
 
     } else {
 
@@ -68,7 +68,7 @@ class ExerciseDetailViewController: UITableViewController {
 
       // Copy view state back into model
       exercise.name = nameTextField.text!
-      exercise.description = descriptionTextField.text!
+      exercise.description = descriptionTextView.text!
 
       // Notify delegate of editing completion
       delegate?.exerciseDetailViewController(self,
@@ -78,7 +78,7 @@ class ExerciseDetailViewController: UITableViewController {
 
       // Create new exercise
       let exercise = Exercise(name: nameTextField.text!,
-                              description: descriptionTextField.text!)
+                              description: descriptionTextView.text!)
       delegate?.exerciseDetailViewController(self,
                                              didFinishAdding: exercise)
     }

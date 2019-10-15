@@ -96,26 +96,26 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="y6f-xt-MNV">
-                                        <rect key="frame" x="0.0" y="134" width="375" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="y6f-xt-MNV">
+                                        <rect key="frame" x="0.0" y="134" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y6f-xt-MNV" id="Ni1-20-I28">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description of the exercise" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hy1-sk-bAm">
-                                                    <rect key="frame" x="16" y="13.5" width="343" height="17"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cwJ-QP-eBp">
+                                                    <rect key="frame" x="12" y="16" width="347" height="268"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                                    <connections>
-                                                        <action selector="done:" destination="ZI0-ce-YCW" eventType="editingDidEndOnExit" id="5ci-4P-5tj"/>
-                                                    </connections>
-                                                </textField>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="hy1-sk-bAm" secondAttribute="trailing" constant="16" id="S21-WT-Z1s"/>
-                                                <constraint firstItem="hy1-sk-bAm" firstAttribute="centerY" secondItem="Ni1-20-I28" secondAttribute="centerY" id="Tda-b2-baE"/>
-                                                <constraint firstItem="hy1-sk-bAm" firstAttribute="leading" secondItem="Ni1-20-I28" secondAttribute="leading" constant="16" id="lO9-eb-UET"/>
+                                                <constraint firstItem="cwJ-QP-eBp" firstAttribute="top" secondItem="Ni1-20-I28" secondAttribute="top" constant="16" id="92t-Z5-yfb"/>
+                                                <constraint firstAttribute="bottom" secondItem="cwJ-QP-eBp" secondAttribute="bottom" constant="16" id="98A-IK-qy4"/>
+                                                <constraint firstAttribute="trailing" secondItem="cwJ-QP-eBp" secondAttribute="trailing" constant="16" id="DeE-1x-Ms3"/>
+                                                <constraint firstItem="cwJ-QP-eBp" firstAttribute="leading" secondItem="Ni1-20-I28" secondAttribute="leading" constant="12" id="YzQ-6M-6mF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -140,7 +140,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descriptionTextField" destination="hy1-sk-bAm" id="0QA-DW-Ozz"/>
+                        <outlet property="descriptionTextView" destination="cwJ-QP-eBp" id="hCd-Rh-hxh"/>
                         <outlet property="doneBarButton" destination="8Rv-Pq-Dfg" id="RbJ-3f-iXp"/>
                         <outlet property="nameTextField" destination="pfY-om-lll" id="j5L-sq-4XW"/>
                     </connections>
