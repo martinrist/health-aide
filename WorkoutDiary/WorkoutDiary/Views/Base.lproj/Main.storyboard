@@ -104,16 +104,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cwJ-QP-eBp">
-                                                    <rect key="frame" x="12" y="16" width="347" height="268"/>
+                                                    <rect key="frame" x="12" y="8" width="347" height="284"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="ZI0-ce-YCW" id="tdq-0I-NQ4"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="cwJ-QP-eBp" firstAttribute="top" secondItem="Ni1-20-I28" secondAttribute="top" constant="16" id="92t-Z5-yfb"/>
-                                                <constraint firstAttribute="bottom" secondItem="cwJ-QP-eBp" secondAttribute="bottom" constant="16" id="98A-IK-qy4"/>
+                                                <constraint firstItem="cwJ-QP-eBp" firstAttribute="top" secondItem="Ni1-20-I28" secondAttribute="top" constant="8" id="92t-Z5-yfb"/>
+                                                <constraint firstAttribute="bottom" secondItem="cwJ-QP-eBp" secondAttribute="bottom" constant="8" id="98A-IK-qy4"/>
                                                 <constraint firstAttribute="trailing" secondItem="cwJ-QP-eBp" secondAttribute="trailing" constant="16" id="DeE-1x-Ms3"/>
                                                 <constraint firstItem="cwJ-QP-eBp" firstAttribute="leading" secondItem="Ni1-20-I28" secondAttribute="leading" constant="12" id="YzQ-6M-6mF"/>
                                             </constraints>
