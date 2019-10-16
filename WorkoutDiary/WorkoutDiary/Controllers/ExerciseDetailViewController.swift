@@ -23,29 +23,11 @@ class ExerciseDetailViewController: UITableViewController {
   weak var delegate: ExerciseDetailViewControllerDelegate?
   var exerciseToEdit: Exercise?
 
-  var showingDescriptionPlaceholder = true
-  var descriptionViewContents: String {
-    set {
-      showingDescriptionPlaceholder = newValue.isEmpty
-      if newValue.isEmpty {
-        descriptionTextView.text = "Exercise description..."
-        let startPosition = descriptionTextView.beginningOfDocument
-        descriptionTextView.selectedTextRange = descriptionTextView.textRange(from: startPosition, to: startPosition)
-        descriptionTextView.textColor = .placeholderText
-      } else {
-        descriptionTextView.text = newValue
-        descriptionTextView.textColor = .label
-      }
-    }
-    get {
-      showingDescriptionPlaceholder ? "" : descriptionTextView.text
-    }
-  }
-
   // MARK: - Outlets
 
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var descriptionTextView: UITextView!
+  @IBOutlet weak var descriptionPlaceholderLabel: UILabel!
   @IBOutlet weak var doneBarButton: UIBarButtonItem!
 
   // MARK: - Lifecycle
@@ -61,13 +43,13 @@ class ExerciseDetailViewController: UITableViewController {
 
       // Copy model data into view
       nameTextField.text = exercise.name
-      descriptionViewContents = exercise.description
+      descriptionTextView.text = exercise.description
+      descriptionPlaceholderLabel.isHidden = !exercise.description.isEmpty
 
     } else {
 
       // Set up view state for adding
       title = "Add exercise"
-      descriptionViewContents = ""
     }
   }
 
@@ -88,7 +70,7 @@ class ExerciseDetailViewController: UITableViewController {
 
       // Copy view state back into model
       exercise.name = nameTextField.text!
-      exercise.description = descriptionViewContents
+      exercise.description = descriptionTextView.text
 
       // Notify delegate of editing completion
       delegate?.exerciseDetailViewController(self,
@@ -98,7 +80,7 @@ class ExerciseDetailViewController: UITableViewController {
 
       // Create new exercise
       let exercise = Exercise(name: nameTextField.text!,
-                              description: descriptionViewContents)
+                              description: descriptionTextView.text)
       delegate?.exerciseDetailViewController(self,
                                              didFinishAdding: exercise)
     }
@@ -143,28 +125,11 @@ extension ExerciseDetailViewController: UITextViewDelegate {
   func textView(_ textView: UITextView,
                 shouldChangeTextIn range: NSRange,
                 replacementText text: String) -> Bool {
-
-    // Work out what the 'new' text would be
     let oldText = textView.text!
     let stringRange = Range(range, in: oldText)!
-    let newText = showingDescriptionPlaceholder
-      ? text
-      : oldText.replacingCharacters(in: stringRange, with: text)
-
-    descriptionViewContents = newText
-    return false
+    let newText = oldText.replacingCharacters(in: stringRange, with: text)
+    descriptionPlaceholderLabel.isHidden = !newText.isEmpty
+    return true
   }
-
-
-  func textViewDidChangeSelection(_ textView: UITextView) {
-   let startPosition = descriptionTextView.beginningOfDocument
-    descriptionTextView.selectedTextRange = descriptionTextView.textRange(from: startPosition, to: startPosition)
-  }
-//  func textViewDidChangeSelection(_ textView: UITextView) {
-//    if showingDescriptionPlaceholder {
-//      let startPosition = descriptionTextView.beginningOfDocument
-//      descriptionTextView.selectedTextRange = descriptionTextView.textRange(from: startPosition, to: startPosition)
-//    }
-//  }
 
 }

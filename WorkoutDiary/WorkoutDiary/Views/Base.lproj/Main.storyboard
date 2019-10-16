@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bQB-Hd-6FE">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -79,7 +78,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the exercise" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfY-om-lll">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the exercise" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfY-om-lll" userLabel="Name">
                                                     <rect key="frame" x="16" y="13.5" width="343" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -103,22 +102,43 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cwJ-QP-eBp">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JuX-kF-Ycd" userLabel="Description">
                                                     <rect key="frame" x="12" y="8" width="347" height="284"/>
+                                                    <subviews>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cwJ-QP-eBp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="347" height="284"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="no"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="ZI0-ce-YCW" id="tdq-0I-NQ4"/>
+                                                            </connections>
+                                                        </textView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of the exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3G-hN-v6w" userLabel="Description Placeholder Label">
+                                                            <rect key="frame" x="4" y="8" width="339" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="ZI0-ce-YCW" id="tdq-0I-NQ4"/>
-                                                    </connections>
-                                                </textView>
+                                                    <constraints>
+                                                        <constraint firstItem="cwJ-QP-eBp" firstAttribute="top" secondItem="JuX-kF-Ycd" secondAttribute="top" id="5u9-pi-wID"/>
+                                                        <constraint firstAttribute="trailing" secondItem="h3G-hN-v6w" secondAttribute="trailing" constant="4" id="MAR-Uy-vfV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cwJ-QP-eBp" secondAttribute="trailing" id="QMc-Ex-krb"/>
+                                                        <constraint firstItem="h3G-hN-v6w" firstAttribute="leading" secondItem="cwJ-QP-eBp" secondAttribute="leading" constant="4" id="VLw-qi-zp8"/>
+                                                        <constraint firstItem="h3G-hN-v6w" firstAttribute="top" secondItem="cwJ-QP-eBp" secondAttribute="top" constant="8" id="g8f-nk-S8n"/>
+                                                        <constraint firstAttribute="bottom" secondItem="cwJ-QP-eBp" secondAttribute="bottom" id="iAH-AB-k9V"/>
+                                                        <constraint firstItem="cwJ-QP-eBp" firstAttribute="leading" secondItem="JuX-kF-Ycd" secondAttribute="leading" id="zFz-fx-uwx"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="cwJ-QP-eBp" firstAttribute="top" secondItem="Ni1-20-I28" secondAttribute="top" constant="8" id="92t-Z5-yfb"/>
-                                                <constraint firstAttribute="bottom" secondItem="cwJ-QP-eBp" secondAttribute="bottom" constant="8" id="98A-IK-qy4"/>
-                                                <constraint firstAttribute="trailing" secondItem="cwJ-QP-eBp" secondAttribute="trailing" constant="16" id="DeE-1x-Ms3"/>
-                                                <constraint firstItem="cwJ-QP-eBp" firstAttribute="leading" secondItem="Ni1-20-I28" secondAttribute="leading" constant="12" id="YzQ-6M-6mF"/>
+                                                <constraint firstItem="JuX-kF-Ycd" firstAttribute="top" secondItem="Ni1-20-I28" secondAttribute="top" constant="8" id="3ma-07-tgJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="JuX-kF-Ycd" secondAttribute="trailing" constant="16" id="7cj-Jg-8Ue"/>
+                                                <constraint firstAttribute="bottom" secondItem="JuX-kF-Ycd" secondAttribute="bottom" constant="8" id="Qtw-30-nCo"/>
+                                                <constraint firstItem="JuX-kF-Ycd" firstAttribute="leading" secondItem="Ni1-20-I28" secondAttribute="leading" constant="12" id="vzj-fZ-gvF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -143,6 +163,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="descriptionPlaceholderLabel" destination="h3G-hN-v6w" id="AdS-le-CrB"/>
                         <outlet property="descriptionTextView" destination="cwJ-QP-eBp" id="hCd-Rh-hxh"/>
                         <outlet property="doneBarButton" destination="8Rv-Pq-Dfg" id="RbJ-3f-iXp"/>
                         <outlet property="nameTextField" destination="pfY-om-lll" id="j5L-sq-4XW"/>
@@ -172,7 +193,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ig7-iH-GE0"/>
+        <segue reference="IEc-CR-Yh2"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
