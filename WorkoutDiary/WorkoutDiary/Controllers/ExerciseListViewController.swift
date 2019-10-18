@@ -59,6 +59,14 @@ extension ExerciseListViewController {
     cell.detailTextLabel!.text = exercise.description
   }
 
+  override func tableView(_ tableView: UITableView,
+                          commit editingStyle: UITableViewCell.EditingStyle,
+                          forRowAt indexPath: IndexPath) {
+
+    dataModel.exercises.remove(at: indexPath.row)
+    tableView.deleteRows(at: [indexPath], with: .automatic)
+  }
+
 }
 
 
