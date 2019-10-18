@@ -15,7 +15,8 @@ protocol ExerciseDetailViewControllerDelegate: class {
   func exerciseDetailViewController(_ controller: ExerciseDetailViewController,
                                     didFinishAdding exercise: Exercise)
   func exerciseDetailViewController(_ controller: ExerciseDetailViewController,
-                                    didFinishEditing exercise: Exercise)
+                                    didFinishEditing oldExercise: Exercise,
+                                    to newExercise: Exercise)
 }
 
 
@@ -76,15 +77,17 @@ class ExerciseDetailViewController: UITableViewController {
 
   @IBAction func done(_ sender: Any) {
 
-    if let exercise = exerciseToEdit {
+    if let oldExercise = exerciseToEdit {
 
       // Copy view state back into model
-      exercise.name = nameTextField.text!
-      exercise.description = descriptionTextView.text
+      var newExercise = oldExercise
+      newExercise.name = nameTextField.text!
+      newExercise.description = descriptionTextView.text
 
       // Notify delegate of editing completion
       delegate?.exerciseDetailViewController(self,
-                                             didFinishEditing: exercise)
+                                             didFinishEditing: oldExercise,
+                                             to: newExercise)
 
     } else {
 

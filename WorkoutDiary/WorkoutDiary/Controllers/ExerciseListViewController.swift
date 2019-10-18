@@ -103,7 +103,7 @@ extension ExerciseListViewController: ExerciseDetailViewControllerDelegate {
   func exerciseDetailViewController(_ controller: ExerciseDetailViewController,
                                     didFinishAdding exercise: Exercise) {
 
-    // Update data model
+    // Update model
     dataModel.exercises.append(exercise)
 
     // Update view
@@ -116,13 +116,19 @@ extension ExerciseListViewController: ExerciseDetailViewControllerDelegate {
   }
 
   func exerciseDetailViewController(_ controller: ExerciseDetailViewController,
-                                    didFinishEditing exercise: Exercise) {
+                                    didFinishEditing oldExercise: Exercise,
+                                    to newExercise: Exercise) {
 
-    // Update view
-    if let index = dataModel.exercises.firstIndex(of: exercise) {
+    if let index = dataModel.exercises.firstIndex(of: oldExercise) {
+
+      // Update model
+      dataModel.exercises.remove(at: index)
+      dataModel.exercises.insert(newExercise, at: index)
+
+      // Update view
       let indexPath = IndexPath(row: index, section: 0)
       if let cell = tableView.cellForRow(at: indexPath) {
-        configureCell(cell, with: exercise)
+        configureCell(cell, with: newExercise)
       }
     }
 
