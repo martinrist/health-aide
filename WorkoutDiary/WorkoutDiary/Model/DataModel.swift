@@ -14,12 +14,15 @@ class DataModel {
 
   var exercises = [Exercise]()
 
+
   // MARK: - Lifecycle
 
   init() {
     loadExercises()
   }
 }
+
+
 
 // MARK: - Test Data
 
