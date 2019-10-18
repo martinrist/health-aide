@@ -99,19 +99,6 @@ class ExerciseDetailViewController: UITableViewController {
 
 
 
-// MARK: - UITableViewDelegate
-
-extension ExerciseDetailViewController {
-
-  override func tableView(_ tableView: UITableView,
-                          willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-    // Prevents the rows behind the text fields being selected
-    return nil
-  }
-}
-
-
-
 // MARK: - UITextFieldDelegate
 
 extension ExerciseDetailViewController: UITextFieldDelegate {
