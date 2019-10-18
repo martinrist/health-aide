@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - ExerciseDetailViewControllerDelegate
+
 protocol ExerciseDetailViewControllerDelegate: class {
   func exerciseDetailViewControllerDidCancel(_ controller: ExerciseDetailViewController)
   func exerciseDetailViewController(_ controller: ExerciseDetailViewController,
@@ -16,12 +18,18 @@ protocol ExerciseDetailViewControllerDelegate: class {
                                     didFinishEditing exercise: Exercise)
 }
 
+
+
+// MARK: - ExerciseDetailViewController
+
 class ExerciseDetailViewController: UITableViewController {
+
 
   // MARK: - Properties
 
   weak var delegate: ExerciseDetailViewControllerDelegate?
   var exerciseToEdit: Exercise?
+
 
   // MARK: - Outlets
 
@@ -29,6 +37,7 @@ class ExerciseDetailViewController: UITableViewController {
   @IBOutlet weak var descriptionTextView: UITextView!
   @IBOutlet weak var descriptionPlaceholderLabel: UILabel!
   @IBOutlet weak var doneBarButton: UIBarButtonItem!
+
 
   // MARK: - Lifecycle
 
@@ -57,6 +66,7 @@ class ExerciseDetailViewController: UITableViewController {
     super.viewWillAppear(animated)
     nameTextField.becomeFirstResponder()
   }
+
 
   // MARK: - Actions
 
@@ -87,6 +97,8 @@ class ExerciseDetailViewController: UITableViewController {
   }
 }
 
+
+
 // MARK: - UITableViewDelegate
 
 extension ExerciseDetailViewController {
@@ -97,6 +109,8 @@ extension ExerciseDetailViewController {
     return nil
   }
 }
+
+
 
 // MARK: - UITextFieldDelegate
 
@@ -117,6 +131,8 @@ extension ExerciseDetailViewController: UITextFieldDelegate {
     return true
   }
 }
+
+
 
 // MARK: - UITextViewDelegate
 

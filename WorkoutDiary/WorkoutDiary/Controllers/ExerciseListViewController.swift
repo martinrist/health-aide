@@ -10,6 +10,7 @@ import UIKit
 
 class ExerciseListViewController: UITableViewController {
 
+
   // MARK: - Segue Identifiers
 
   enum SegueIdentifier: String {
@@ -17,17 +18,21 @@ class ExerciseListViewController: UITableViewController {
     case editExercise
   }
 
+
   // MARK: - Cell Reuse Identifiers
 
   enum CellIdentifier: String {
     case exerciseCell
   }
 
+
   // MARK: - Properties
 
   var dataModel: DataModel!
 
 }
+
+
 
 // MARK: - Table View Data Source
 
@@ -56,6 +61,8 @@ extension ExerciseListViewController {
 
 }
 
+
+
 // MARK: - Navigation
 
 extension ExerciseListViewController {
@@ -82,6 +89,8 @@ extension ExerciseListViewController {
     }
   }
 }
+
+
 
 // MARK: - ExerciseDetailViewControllerDelegate
 
