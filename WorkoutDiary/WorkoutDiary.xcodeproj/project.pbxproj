@@ -22,6 +22,7 @@
 		3663CE4C23268B66009E8BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3663CE4A23268B66009E8BCC /* LaunchScreen.storyboard */; };
 		3663CE6223268B66009E8BCC /* WorkoutDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663CE6123268B66009E8BCC /* WorkoutDiaryUITests.swift */; };
 		36AECEE523608A4A0056628F /* RoutineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AECEE423608A4A0056628F /* RoutineDetailViewController.swift */; };
+		36AECEE6236090790056628F /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649B387236071AA00A8EB82 /* Routine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -355,6 +356,7 @@
 			files = (
 				3610BE792355F35D00BC3EFF /* Exercise.swift in Sources */,
 				3610BE772355F2FA00BC3EFF /* DataModelTests.swift in Sources */,
+				36AECEE6236090790056628F /* Routine.swift in Sources */,
 				3610BE782355F31D00BC3EFF /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,7 +28,7 @@ class WorkoutDiaryUITests: XCTestCase {
   }
 
   func testStartup_ShowsExerciseListHeader() {
-    XCTAssertTrue(app.staticTexts["Exercises"].exists)
+    XCTAssertTrue(app.staticTexts["Routines"].exists)
   }
 
 }
