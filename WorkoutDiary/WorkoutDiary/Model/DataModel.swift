@@ -12,13 +12,12 @@ class DataModel {
 
   // MARK: - Properties
 
-  var exercises = [Exercise]()
-
+  var routines = [Routine]()
 
   // MARK: - Lifecycle
 
   init() {
-    loadExercises()
+    loadData()
   }
 }
 
@@ -28,8 +27,18 @@ class DataModel {
 
 extension DataModel {
 
-  func loadExercises() {
-    // No-op for now - just a stub where test data can be added
+  func loadData() {
+    routines = Array(1...5).map { routineNumber in
+      let routine = Routine(name: "Routine \(routineNumber)",
+                            description: "Routine \(routineNumber) description")
+
+      routine.exercises = Array(1...routineNumber).map { exerciseNumber in
+        Exercise(name: "Exercise \(routineNumber).\(exerciseNumber)",
+                 description: "Exercise \(routineNumber).\(exerciseNumber) description")
+      }
+
+      return routine
+    }
   }
 
 }

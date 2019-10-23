@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     -> Bool {
 
       if let navigationController = window!.rootViewController as? UINavigationController,
-        let controller = navigationController.viewControllers[0] as? ExerciseListViewController {
+        let controller = navigationController.viewControllers[0] as? RoutineListViewController {
         controller.dataModel = dataModel
       }
       return true
