@@ -14,6 +14,8 @@ protocol RoutineDetailViewControllerDelegate: class {
   func routineDetailViewControllerDidCancel(_ controller: RoutineDetailViewController)
   func routineDetailViewController(_ controller: RoutineDetailViewController,
                                    didFinishAdding routine: Routine)
+  func routineDetailViewController(_ controller: RoutineDetailViewController,
+                                   didFinishEditing routine: Routine)
 }
 
 class RoutineDetailViewController: UITableViewController {
@@ -21,7 +23,7 @@ class RoutineDetailViewController: UITableViewController {
   // MARK: - Properties
 
   weak var delegate: RoutineDetailViewControllerDelegate?
-
+  var routineToEdit: Routine?
 
   // MARK: - Outlets
 
@@ -36,8 +38,24 @@ class RoutineDetailViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // Set up view state for adding
-    title = "Add routine"
+    if let routine = routineToEdit {
+
+      // Set up view state for editing
+      title = "Edit routine"
+      doneBarButton.isEnabled = true
+
+      // Copy model data into view
+      nameTextField.text = routine.name
+      descriptionTextView.text = routine.description
+      descriptionPlaceholderLabel.isHidden = !routine.description.isEmpty
+
+    } else {
+
+      // Set up view state for adding
+      title = "Add routine"
+
+    }
+
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -54,11 +72,23 @@ class RoutineDetailViewController: UITableViewController {
 
   @IBAction func done(_ sender: Any) {
 
-    // Create new routine
-    let routine = Routine(name: nameTextField.text!,
-                          description: descriptionTextView.text)
-    delegate?.routineDetailViewController(self,
-                                          didFinishAdding: routine)
+    if let routine = routineToEdit {
+
+      // Copy view state back into model
+      routine.name = nameTextField.text!
+      routine.description = descriptionTextView.text
+
+      // Notify delegate of editing completion
+      delegate?.routineDetailViewController(self,
+                                            didFinishEditing: routine)
+
+    } else {
+      // Create new routine
+      let routine = Routine(name: nameTextField.text!,
+                            description: descriptionTextView.text)
+      delegate?.routineDetailViewController(self,
+                                            didFinishAdding: routine)
+    }
   }
 }
 

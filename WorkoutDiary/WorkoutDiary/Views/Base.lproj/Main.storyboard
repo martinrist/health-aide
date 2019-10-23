@@ -225,6 +225,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="4n7-pR-f29" kind="show" identifier="showRoutine" id="d9z-vJ-YH8"/>
+                                    <segue destination="Uhe-VU-KHV" kind="show" identifier="editRoutine" trigger="accessoryAction" id="kWo-vd-6dV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -360,6 +361,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="kWo-vd-6dV"/>
         <segue reference="ig7-iH-GE0"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

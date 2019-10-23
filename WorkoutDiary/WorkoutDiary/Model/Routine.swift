@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Routine {
+class Routine: Equatable {
 
   var name: String
   var description: String
@@ -21,6 +21,12 @@ class Routine {
 
   var exerciseCount: Int {
     exercises.count
+  }
+
+  static func == (lhs: Routine, rhs: Routine) -> Bool {
+    return lhs.name == rhs.name
+      && lhs.description == rhs.description
+      && lhs.exercises == rhs.exercises
   }
 
 }

@@ -15,6 +15,7 @@ class RoutineListViewController: UITableViewController {
   enum SegueIdentifier: String {
     case showRoutine
     case addRoutine
+    case editRoutine
   }
 
 
@@ -110,7 +111,16 @@ extension RoutineListViewController {
       let controller = segue.destination as! RoutineDetailViewController
       controller.delegate = self
 
+    case .editRoutine:
+      // swiftlint:disable:next force_cast
+      let controller = segue.destination as! RoutineDetailViewController
+      controller.delegate = self
+      if let sender = sender as? UITableViewCell,
+        let indexPath = tableView.indexPath(for: sender) {
+        controller.routineToEdit = dataModel.routines[indexPath.row]
+      }
     }
+
   }
 }
 
@@ -138,5 +148,18 @@ extension RoutineListViewController: RoutineDetailViewControllerDelegate {
     navigationController?.popViewController(animated: true)
   }
 
+  func routineDetailViewController(_ controller: RoutineDetailViewController, didFinishEditing routine: Routine) {
 
+    // Update view
+    if let index = dataModel.routines.firstIndex(of: routine) {
+      let indexPath = IndexPath(row: index, section: 0)
+      if let cell = tableView.cellForRow(at: indexPath) {
+        configureCell(cell, with: routine)
+      }
+    }
+
+    // Pop the 'add' screen off
+    navigationController?.popViewController(animated: true)
+
+  }
 }
