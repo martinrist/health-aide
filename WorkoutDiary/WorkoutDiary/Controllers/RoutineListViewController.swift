@@ -36,6 +36,10 @@ class RoutineListViewController: UITableViewController {
     super.viewDidLoad()
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    tableView.reloadData()
+  }
 
 }
 
@@ -65,7 +69,8 @@ extension RoutineListViewController {
   private func configureCell(_ cell: UITableViewCell,
                              with routine: Routine) {
     cell.textLabel!.text = routine.name
-    // TODO: Add number of exercises
+    cell.detailTextLabel!.text = "\(routine.exerciseCount)"
+    cell.detailTextLabel?.textColor = .secondaryLabel
   }
 
 

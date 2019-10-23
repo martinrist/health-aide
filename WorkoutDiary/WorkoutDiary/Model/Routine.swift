@@ -19,4 +19,8 @@ class Routine {
     self.description = description
   }
 
+  var exerciseCount: Int {
+    exercises.count
+  }
+
 }
