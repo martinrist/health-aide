@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="4n7-pR-f29" id="dm0-En-aBQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Exercises" largeTitleDisplayMode="always" id="2WM-P9-Wu0">
+                    <navigationItem key="navigationItem" title="Exercises" largeTitleDisplayMode="never" id="2WM-P9-Wu0">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WG1-es-z7h">
                             <connections>
                                 <segue destination="ZI0-ce-YCW" kind="show" identifier="addExercise" id="ig7-iH-GE0"/>
@@ -58,12 +58,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaB-FJ-T5K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102.8985507246377" y="136.60714285714286"/>
+            <point key="canvasLocation" x="1871" y="136"/>
         </scene>
-        <!--Add Exercise-->
+        <!--Exercise Details-->
         <scene sceneID="nD4-77-k1X">
             <objects>
-                <tableViewController id="ZI0-ce-YCW" customClass="ExerciseDetailViewController" customModule="WorkoutDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ZI0-ce-YCW" userLabel="Exercise Details" customClass="ExerciseDetailViewController" customModule="WorkoutDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Olc-jz-XdX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,7 @@
                             <tableViewSection headerTitle="Details" id="ze4-U9-sRL">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MHM-u3-5Ku">
-                                        <rect key="frame" x="0.0" y="90.5" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MHM-u3-5Ku" id="A1X-IQ-Tkn">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -96,7 +96,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="y6f-xt-MNV">
-                                        <rect key="frame" x="0.0" y="134" width="375" height="300"/>
+                                        <rect key="frame" x="0.0" y="99" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y6f-xt-MNV" id="Ni1-20-I28">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
@@ -171,7 +171,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRr-9S-9WL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1997" y="138"/>
+            <point key="canvasLocation" x="2679" y="136"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="whf-bq-09i">
@@ -184,12 +184,53 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="4n7-pR-f29" kind="relationship" relationship="rootViewController" id="2tL-4V-pLn"/>
+                        <segue destination="E6L-HV-QKf" kind="relationship" relationship="rootViewController" id="ss6-Mr-k1z"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cA-Ns-zZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="192.75362318840581" y="136.60714285714286"/>
+        </scene>
+        <!--Routines-->
+        <scene sceneID="gJk-ov-7oq">
+            <objects>
+                <tableViewController id="E6L-HV-QKf" userLabel="Routines" customClass="RoutineListViewController" customModule="WorkoutDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C9O-0w-fxJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="routineCell" textLabel="fb7-Ol-wl7" style="IBUITableViewCellStyleDefault" id="8aG-az-dNZ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8aG-az-dNZ" id="ESI-Kc-8uo">
+                                    <rect key="frame" x="0.0" y="0.0" width="316" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fb7-Ol-wl7">
+                                            <rect key="frame" x="16" y="0.0" width="292" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="4n7-pR-f29" kind="show" identifier="showRoutine" id="d9z-vJ-YH8"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="E6L-HV-QKf" id="qWF-oQ-7zs"/>
+                            <outlet property="delegate" destination="E6L-HV-QKf" id="UTX-gN-0oh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Routines" largeTitleDisplayMode="always" id="7ji-pF-0yE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHa-sp-l4C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041" y="136"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

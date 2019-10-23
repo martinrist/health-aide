@@ -28,8 +28,15 @@ class ExerciseListViewController: UITableViewController {
 
   // MARK: - Properties
 
-  var dataModel: DataModel!
+  var routine: Routine!
 
+
+  // MARK: - Lifecycle
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    title = routine.name
+  }
 }
 
 
@@ -40,7 +47,7 @@ extension ExerciseListViewController {
 
   override func tableView(_ tableView: UITableView,
                           numberOfRowsInSection section: Int) -> Int {
-    return dataModel.exercises.count
+    return routine.exercises.count
   }
 
   override func tableView(_ tableView: UITableView,
@@ -48,7 +55,7 @@ extension ExerciseListViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.exerciseCell.rawValue,
                                              for: indexPath)
 
-    let exercise = dataModel.exercises[indexPath.row]
+    let exercise = routine.exercises[indexPath.row]
     configureCell(cell, with: exercise)
 
     return cell
@@ -63,7 +70,7 @@ extension ExerciseListViewController {
                           commit editingStyle: UITableViewCell.EditingStyle,
                           forRowAt indexPath: IndexPath) {
 
-    dataModel.exercises.remove(at: indexPath.row)
+    routine.exercises.remove(at: indexPath.row)
     tableView.deleteRows(at: [indexPath], with: .automatic)
   }
 
@@ -92,7 +99,7 @@ extension ExerciseListViewController {
       controller.delegate = self
       if let sender = sender as? UITableViewCell,
         let indexPath = tableView.indexPath(for: sender) {
-        controller.exerciseToEdit = dataModel.exercises[indexPath.row]
+        controller.exerciseToEdit = routine.exercises[indexPath.row]
       }
     }
   }
@@ -112,10 +119,10 @@ extension ExerciseListViewController: ExerciseDetailViewControllerDelegate {
                                     didFinishAdding exercise: Exercise) {
 
     // Update data model
-    dataModel.exercises.append(exercise)
+    routine.exercises.append(exercise)
 
     // Update view
-    let newRowIndex = dataModel.exercises.count - 1
+    let newRowIndex = routine.exercises.count - 1
     let newIndexPath = IndexPath(item: newRowIndex, section: 0)
     tableView.insertRows(at: [newIndexPath], with: .automatic)
 
@@ -127,7 +134,7 @@ extension ExerciseListViewController: ExerciseDetailViewControllerDelegate {
                                     didFinishEditing exercise: Exercise) {
 
     // Update view
-    if let index = dataModel.exercises.firstIndex(of: exercise) {
+    if let index = routine.exercises.firstIndex(of: exercise) {
       let indexPath = IndexPath(row: index, section: 0)
       if let cell = tableView.cellForRow(at: indexPath) {
         configureCell(cell, with: exercise)
