@@ -14,8 +14,8 @@ class RoutineListViewController: UITableViewController {
 
   enum SegueIdentifier: String {
     case showRoutine
+    case addRoutine
   }
-
 
 
   // MARK: - Cell Reuse Identifiers
@@ -65,14 +65,12 @@ extension RoutineListViewController {
     return cell
   }
 
-
   private func configureCell(_ cell: UITableViewCell,
                              with routine: Routine) {
     cell.textLabel!.text = routine.name
     cell.detailTextLabel!.text = "\(routine.exerciseCount)"
     cell.detailTextLabel?.textColor = .secondaryLabel
   }
-
 
   override func tableView(_ tableView: UITableView,
                           commit editingStyle: UITableViewCell.EditingStyle,
@@ -107,6 +105,38 @@ extension RoutineListViewController {
         controller.routine = dataModel.routines[indexPath.row]
       }
 
+    case .addRoutine:
+      // swiftlint:disable:next force_cast
+      let controller = segue.destination as! RoutineDetailViewController
+      controller.delegate = self
+
     }
   }
+}
+
+
+
+// MARK: - RoutineDetailViewControllerDelegate
+
+extension RoutineListViewController: RoutineDetailViewControllerDelegate {
+
+  func routineDetailViewControllerDidCancel(_ controller: RoutineDetailViewController) {
+    navigationController?.popViewController(animated: true)
+  }
+
+  func routineDetailViewController(_ controller: RoutineDetailViewController, didFinishAdding routine: Routine) {
+
+    // Update data model
+    dataModel.routines.append(routine)
+
+    // Update view
+    let newRowIndex = dataModel.routines.count - 1
+    let newIndexPath = IndexPath(row: newRowIndex, section: 0)
+    tableView.insertRows(at: [newIndexPath], with: .automatic)
+
+    // Pop the 'add' screen off
+    navigationController?.popViewController(animated: true)
+  }
+
+
 }

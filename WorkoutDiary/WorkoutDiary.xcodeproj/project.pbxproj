@@ -21,6 +21,7 @@
 		3663CE4923268B66009E8BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3663CE4823268B66009E8BCC /* Assets.xcassets */; };
 		3663CE4C23268B66009E8BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3663CE4A23268B66009E8BCC /* LaunchScreen.storyboard */; };
 		3663CE6223268B66009E8BCC /* WorkoutDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663CE6123268B66009E8BCC /* WorkoutDiaryUITests.swift */; };
+		36AECEE523608A4A0056628F /* RoutineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AECEE423608A4A0056628F /* RoutineDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3663CE5D23268B66009E8BCC /* WorkoutDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3663CE6123268B66009E8BCC /* WorkoutDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryUITests.swift; sourceTree = "<group>"; };
 		3663CE6323268B66009E8BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36AECEE423608A4A0056628F /* RoutineDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				3649B3852360706B00A8EB82 /* RoutineListViewController.swift */,
+				36AECEE423608A4A0056628F /* RoutineDetailViewController.swift */,
 				3610BE742355ECDD00BC3EFF /* ExerciseListViewController.swift */,
 				3610BE7A23560F8900BC3EFF /* ExerciseDetailViewController.swift */,
 			);
@@ -339,6 +342,7 @@
 				3649B388236071AA00A8EB82 /* Routine.swift in Sources */,
 				3610BE732355EA6C00BC3EFF /* DataModel.swift in Sources */,
 				3663CE3F23268B66009E8BCC /* AppDelegate.swift in Sources */,
+				36AECEE523608A4A0056628F /* RoutineDetailViewController.swift in Sources */,
 				3649B3862360706B00A8EB82 /* RoutineListViewController.swift in Sources */,
 				3610BE7B23560F8900BC3EFF /* ExerciseDetailViewController.swift in Sources */,
 				3610BE712355E98100BC3EFF /* Exercise.swift in Sources */,

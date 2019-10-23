@@ -233,15 +233,134 @@
                             <outlet property="delegate" destination="E6L-HV-QKf" id="UTX-gN-0oh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Routines" largeTitleDisplayMode="always" id="7ji-pF-0yE"/>
+                    <navigationItem key="navigationItem" title="Routines" largeTitleDisplayMode="always" id="7ji-pF-0yE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bv6-ie-IGm">
+                            <connections>
+                                <segue destination="Uhe-VU-KHV" kind="show" identifier="addRoutine" id="xOb-nH-cPv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZHa-sp-l4C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1041" y="136"/>
         </scene>
+        <!--Routine Details-->
+        <scene sceneID="QZo-U4-kwQ">
+            <objects>
+                <tableViewController id="Uhe-VU-KHV" userLabel="Routine Details" customClass="RoutineDetailViewController" customModule="WorkoutDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="YEH-0g-kCx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Details" id="u2l-yo-OiH">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="V2Z-D0-Yuc">
+                                        <rect key="frame" x="0.0" y="90.5" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V2Z-D0-Yuc" id="aN4-V6-IGN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the exercise routine" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JWT-Xf-rTf" userLabel="Name">
+                                                    <rect key="frame" x="16" y="13.5" width="343" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="done:" destination="Uhe-VU-KHV" eventType="editingDidEndOnExit" id="ttz-N2-iNZ"/>
+                                                        <outlet property="delegate" destination="Uhe-VU-KHV" id="RYt-P8-Cnj"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="JWT-Xf-rTf" secondAttribute="trailing" constant="16" id="8yI-sK-N36"/>
+                                                <constraint firstItem="JWT-Xf-rTf" firstAttribute="leading" secondItem="aN4-V6-IGN" secondAttribute="leading" constant="16" id="Eli-Ot-msq"/>
+                                                <constraint firstItem="JWT-Xf-rTf" firstAttribute="centerY" secondItem="aN4-V6-IGN" secondAttribute="centerY" id="a6o-l4-P4G"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="qOj-4O-Vli">
+                                        <rect key="frame" x="0.0" y="134" width="375" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qOj-4O-Vli" id="ci5-kk-wvP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vn0-JP-ZiM" userLabel="Description">
+                                                    <rect key="frame" x="12" y="8" width="347" height="284"/>
+                                                    <subviews>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W2F-wy-B9l" userLabel="Description Text View">
+                                                            <rect key="frame" x="0.0" y="0.0" width="347" height="284"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="Uhe-VU-KHV" id="odD-5o-eQb"/>
+                                                            </connections>
+                                                        </textView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of the exercise routine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-17-Oar" userLabel="Description Placeholder Label">
+                                                            <rect key="frame" x="4" y="8" width="339" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="W2F-wy-B9l" secondAttribute="trailing" id="4fK-VM-7wm"/>
+                                                        <constraint firstItem="WZo-17-Oar" firstAttribute="leading" secondItem="W2F-wy-B9l" secondAttribute="leading" constant="4" id="4sC-4T-jj6"/>
+                                                        <constraint firstItem="WZo-17-Oar" firstAttribute="top" secondItem="W2F-wy-B9l" secondAttribute="top" constant="8" id="6B1-eI-vBp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="WZo-17-Oar" secondAttribute="trailing" constant="4" id="Afg-Bx-3nB"/>
+                                                        <constraint firstItem="W2F-wy-B9l" firstAttribute="leading" secondItem="vn0-JP-ZiM" secondAttribute="leading" id="ajt-Sh-Wsu"/>
+                                                        <constraint firstAttribute="bottom" secondItem="W2F-wy-B9l" secondAttribute="bottom" id="c8X-HM-SZx"/>
+                                                        <constraint firstItem="W2F-wy-B9l" firstAttribute="top" secondItem="vn0-JP-ZiM" secondAttribute="top" id="evA-pL-tCt"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="vn0-JP-ZiM" secondAttribute="bottom" constant="8" id="CnN-Kh-ogx"/>
+                                                <constraint firstItem="vn0-JP-ZiM" firstAttribute="leading" secondItem="ci5-kk-wvP" secondAttribute="leading" constant="12" id="P4I-Mz-6pm"/>
+                                                <constraint firstItem="vn0-JP-ZiM" firstAttribute="top" secondItem="ci5-kk-wvP" secondAttribute="top" constant="8" id="USp-3C-Bpw"/>
+                                                <constraint firstAttribute="trailing" secondItem="vn0-JP-ZiM" secondAttribute="trailing" constant="16" id="hiK-6M-N6Q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Uhe-VU-KHV" id="6CA-WU-3vQ"/>
+                            <outlet property="delegate" destination="Uhe-VU-KHV" id="BSF-ON-ZQX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Routine" largeTitleDisplayMode="never" id="Dre-em-TEu" userLabel="Add Routine">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="993-Xu-2Fc">
+                            <connections>
+                                <action selector="cancel:" destination="Uhe-VU-KHV" id="ulx-ln-kcE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="bqW-Pc-eQw">
+                            <connections>
+                                <action selector="done:" destination="Uhe-VU-KHV" id="7So-kN-tOW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionPlaceholderLabel" destination="WZo-17-Oar" id="E6K-Ct-oPZ"/>
+                        <outlet property="descriptionTextView" destination="W2F-wy-B9l" id="L0s-MD-5mx"/>
+                        <outlet property="doneBarButton" destination="bqW-Pc-eQw" id="xtO-Mr-9s3"/>
+                        <outlet property="nameTextField" destination="JWT-Xf-rTf" id="GMM-Fv-uBT"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5y-Lc-z5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041" y="942"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="IEc-CR-Yh2"/>
+        <segue reference="ig7-iH-GE0"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
