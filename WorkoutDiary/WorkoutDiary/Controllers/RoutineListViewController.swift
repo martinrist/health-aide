@@ -77,7 +77,8 @@ extension RoutineListViewController {
   override func tableView(_ tableView: UITableView,
                           commit editingStyle: UITableViewCell.EditingStyle,
                           forRowAt indexPath: IndexPath) {
-    // TODO: Add implementation
+    dataModel.routines.remove(at: indexPath.row)
+    tableView.deleteRows(at: [indexPath], with: .automatic)
   }
 
 
