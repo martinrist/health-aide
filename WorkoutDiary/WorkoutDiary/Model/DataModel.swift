@@ -16,6 +16,10 @@ class DataModel {
 
   // MARK: - Lifecycle
 
+  init() {
+    // Empty constructor for creating an empty model
+  }
+
   init(fromFilePath dataFile: URL) {
     print("Loading initial data from: \(dataFile)")
     loadData(from: dataFile)

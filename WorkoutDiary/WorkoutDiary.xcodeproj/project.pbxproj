@@ -23,6 +23,7 @@
 		3663CE6223268B66009E8BCC /* WorkoutDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663CE6123268B66009E8BCC /* WorkoutDiaryUITests.swift */; };
 		36AECEE523608A4A0056628F /* RoutineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AECEE423608A4A0056628F /* RoutineDetailViewController.swift */; };
 		36AECEE6236090790056628F /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649B387236071AA00A8EB82 /* Routine.swift */; };
+		36AECEEA236337730056628F /* dataModel-oneRoutine-noExercises.json in Resources */ = {isa = PBXBuildFile; fileRef = 36AECEE9236337730056628F /* dataModel-oneRoutine-noExercises.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		3663CE6123268B66009E8BCC /* WorkoutDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryUITests.swift; sourceTree = "<group>"; };
 		3663CE6323268B66009E8BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36AECEE423608A4A0056628F /* RoutineDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineDetailViewController.swift; sourceTree = "<group>"; };
+		36AECEE9236337730056628F /* dataModel-oneRoutine-noExercises.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "dataModel-oneRoutine-noExercises.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		3663CE5523268B66009E8BCC /* WorkoutDiaryTests */ = {
 			isa = PBXGroup;
 			children = (
+				36AECEE8236337390056628F /* Resources */,
 				3663CE5823268B66009E8BCC /* Info.plist */,
 				3610BE762355F2FA00BC3EFF /* DataModelTests.swift */,
 			);
@@ -184,6 +187,14 @@
 				3663CE6323268B66009E8BCC /* Info.plist */,
 			);
 			path = WorkoutDiaryUITests;
+			sourceTree = "<group>";
+		};
+		36AECEE8236337390056628F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				36AECEE9236337730056628F /* dataModel-oneRoutine-noExercises.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36AECEEA236337730056628F /* dataModel-oneRoutine-noExercises.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
