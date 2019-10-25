@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Exercise: Equatable {
+class Exercise: Equatable, Codable {
 
   var name: String
   var description: String

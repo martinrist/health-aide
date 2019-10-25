@@ -16,29 +16,49 @@ class DataModel {
 
   // MARK: - Lifecycle
 
-  init() {
-    loadData()
+  init(fromFilePath dataFile: URL) {
+    print("Loading initial data from: \(dataFile)")
+    loadData(from: dataFile)
   }
 }
 
 
 
-// MARK: - Test Data
+// MARK: - Persistence
 
 extension DataModel {
 
-  func loadData() {
-    routines = Array(1...5).map { routineNumber in
-      let routine = Routine(name: "Routine \(routineNumber)",
-                            description: "Routine \(routineNumber) description")
-
-      routine.exercises = Array(1...routineNumber).map { exerciseNumber in
-        Exercise(name: "Exercise \(routineNumber).\(exerciseNumber)",
-                 description: "Exercise \(routineNumber).\(exerciseNumber) description")
+  func loadData(from url: URL) {
+    if let data = try? Data(contentsOf: url) {
+      let decoder = JSONDecoder()
+      do {
+        routines = try decoder.decode([Routine].self,
+                                      from: data)
+      } catch {
+        print("Error decoding data: \(error)")
       }
-
-      return routine
     }
+  }
+
+  func saveData(to url: URL) {
+    let encoder = JSONEncoder()
+    encoder.outputFormatting = .prettyPrinted
+    do {
+      let data = try encoder.encode(routines)
+      try data.write(to: url,
+                     options: Data.WritingOptions.atomic)
+    } catch {
+      print("Error encoding item array: \(error)")
+    }
+  }
+
+  static func documentsDirectory() -> URL {
+    FileManager.default.urls(for: .documentDirectory,
+                             in: .userDomainMask)[0]
+  }
+
+  static func dataFilePath() -> URL {
+    documentsDirectory().appendingPathComponent("workoutDiary-routines.json")
   }
 
 }

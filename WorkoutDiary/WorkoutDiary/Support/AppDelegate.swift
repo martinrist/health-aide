@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // MARK: - Properties
 
   var window: UIWindow?
-  let dataModel = DataModel()
+  let dataModel = DataModel(fromFilePath: DataModel.dataFilePath())
 
 
   // MARK: - Lifecycle
@@ -30,6 +30,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         controller.dataModel = dataModel
       }
       return true
+  }
+
+  func applicationDidEnterBackground(_ application: UIApplication) {
+    saveData()
+  }
+
+  func applicationWillTerminate(_ application: UIApplication) {
+    saveData()
+  }
+
+  func applicationWillEnterForeground(_ application: UIApplication) {
+    loadData()
+  }
+
+}
+
+
+
+// MARK: - Persistence Helpers
+
+extension AppDelegate {
+
+  private func saveData() {
+    let dataFile = DataModel.dataFilePath()
+    print("Saving data to: \(dataFile)")
+    dataModel.saveData(to: dataFile)
+  }
+
+  private func loadData() {
+    let dataFile = DataModel.dataFilePath()
+    print("Loading data from: \(dataFile)")
+    dataModel.loadData(from: dataFile)
   }
 
 }

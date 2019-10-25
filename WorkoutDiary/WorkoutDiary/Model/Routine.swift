@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Routine: Equatable {
+class Routine: Equatable, Codable {
 
   var name: String
   var description: String
