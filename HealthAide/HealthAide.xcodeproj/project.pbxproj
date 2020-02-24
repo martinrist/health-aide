@@ -92,7 +92,7 @@
 		3610BE7A23560F8900BC3EFF /* ExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewController.swift; sourceTree = "<group>"; };
 		3649B3852360706B00A8EB82 /* RoutineListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineListViewController.swift; sourceTree = "<group>"; };
 		3649B387236071AA00A8EB82 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
-		3663CE3B23268B66009E8BCC /* Health Aide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Aide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3663CE3B23268B66009E8BCC /* HealthAide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthAide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3663CE3E23268B66009E8BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3663CE4323268B66009E8BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3663CE4823268B66009E8BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 		3663CE3C23268B66009E8BCC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3663CE3B23268B66009E8BCC /* Health Aide.app */,
+				3663CE3B23268B66009E8BCC /* HealthAide.app */,
 				3663CE5223268B66009E8BCC /* HealthAideTests.xctest */,
 				3663CE5D23268B66009E8BCC /* HealthAideUITests.xctest */,
 				29A7048E240471830050C1E4 /* HealthAideFramework.framework */,
@@ -349,7 +349,7 @@
 			);
 			name = HealthAide;
 			productName = WorkoutDiary;
-			productReference = 3663CE3B23268B66009E8BCC /* Health Aide.app */;
+			productReference = 3663CE3B23268B66009E8BCC /* HealthAide.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3663CE5123268B66009E8BCC /* HealthAideTests */ = {
@@ -827,7 +827,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.HealthAide;
-				PRODUCT_NAME = "Health Aide";
+				PRODUCT_NAME = HealthAide;
 				PROVISIONING_PROFILE_SPECIFIER = "HealthAide (Development)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -847,7 +847,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.HealthAide;
-				PRODUCT_NAME = "Health Aide";
+				PRODUCT_NAME = HealthAide;
 				PROVISIONING_PROFILE_SPECIFIER = "HealthAide (Development)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
