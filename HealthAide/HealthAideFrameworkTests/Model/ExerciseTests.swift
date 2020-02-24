@@ -14,7 +14,7 @@ class ExerciseTests: XCTestCase {
   func testInitialisation() {
     let ex = Exercise(name: "name", description: "description")
     XCTAssertEqual(ex.name, "name")
-    XCTAssertEqual(ex.description, "descriptionxxx")
+    XCTAssertEqual(ex.description, "description")
   }
 
 }
