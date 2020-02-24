@@ -403,7 +403,6 @@
 					};
 					29BDE5AD240474250057C0F4 = {
 						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 3663CE3A23268B66009E8BCC;
 					};
 					3663CE3A23268B66009E8BCC = {
 						CreatedOnToolsVersion = 10.3;
@@ -659,7 +658,6 @@
 		29BDE5B6240474250057C0F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NRU5YEF35L;
 				INFOPLIST_FILE = HealthAideFrameworkTests/Info.plist;
@@ -673,14 +671,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Health Aide.app/Health Aide";
 			};
 			name = Debug;
 		};
 		29BDE5B7240474250057C0F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NRU5YEF35L;
 				INFOPLIST_FILE = HealthAideFrameworkTests/Info.plist;
@@ -694,7 +690,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Health Aide.app/Health Aide";
 			};
 			name = Release;
 		};
@@ -871,7 +866,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Health Aide.app/Health Aide";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthAide.app/HealthAide";
 			};
 			name = Debug;
 		};
@@ -892,7 +887,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Health Aide.app/Health Aide";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthAide.app/HealthAide";
 			};
 			name = Release;
 		};

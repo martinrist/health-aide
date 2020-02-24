@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3663CE3A23268B66009E8BCC"
-               BuildableName = "Health Aide.app"
+               BuildableName = "HealthAide.app"
                BlueprintName = "HealthAide"
                ReferencedContainer = "container:HealthAide.xcodeproj">
             </BuildableReference>
@@ -31,7 +31,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3663CE3A23268B66009E8BCC"
-            BuildableName = "Health Aide.app"
+            BuildableName = "HealthAide.app"
             BlueprintName = "HealthAide"
             ReferencedContainer = "container:HealthAide.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3663CE3A23268B66009E8BCC"
-            BuildableName = "Health Aide.app"
+            BuildableName = "HealthAide.app"
             BlueprintName = "HealthAide"
             ReferencedContainer = "container:HealthAide.xcodeproj">
          </BuildableReference>
@@ -101,7 +101,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3663CE3A23268B66009E8BCC"
-            BuildableName = "Health Aide.app"
+            BuildableName = "HealthAide.app"
             BlueprintName = "HealthAide"
             ReferencedContainer = "container:HealthAide.xcodeproj">
          </BuildableReference>
