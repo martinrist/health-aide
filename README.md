@@ -1,2 +1,3 @@
-# workout-diary
-A simple iOS app to store data related to workout and exercises
+# HealthAide
+An iOS app and supporting Playgrounds to capture, track and analyse various
+health- and fitness-related data.
