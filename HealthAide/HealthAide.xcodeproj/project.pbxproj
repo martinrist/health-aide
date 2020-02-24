@@ -565,17 +565,17 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NRU5YEF35L;
-				INFOPLIST_FILE = WorkoutDiaryTests/Info.plist;
+				INFOPLIST_FILE = HealthAideTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.WorkoutDiaryTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.HealthAideTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthAide.app/HealthAide";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Health Aide.app/Health Aide";
 			};
 			name = Debug;
 		};
@@ -586,17 +586,17 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NRU5YEF35L;
-				INFOPLIST_FILE = WorkoutDiaryTests/Info.plist;
+				INFOPLIST_FILE = HealthAideTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.WorkoutDiaryTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.HealthAideTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthAide.app/HealthAide";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Health Aide.app/Health Aide";
 			};
 			name = Release;
 		};
@@ -606,17 +606,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NRU5YEF35L;
-				INFOPLIST_FILE = WorkoutDiaryUITests/Info.plist;
+				INFOPLIST_FILE = HealthAideUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.WorkoutDiaryUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.HealthAideUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WorkoutDiary;
+				TEST_TARGET_NAME = HealthAide;
 			};
 			name = Debug;
 		};
@@ -626,17 +626,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NRU5YEF35L;
-				INFOPLIST_FILE = WorkoutDiaryUITests/Info.plist;
+				INFOPLIST_FILE = HealthAideUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.WorkoutDiaryUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.HealthAideUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WorkoutDiary;
+				TEST_TARGET_NAME = HealthAide;
 			};
 			name = Release;
 		};
