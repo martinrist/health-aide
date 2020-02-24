@@ -8,17 +8,17 @@
 
 import Foundation
 
-class Exercise: Equatable {
+public class Exercise: Equatable {
 
-  var name: String
-  var description: String
+  public var name: String
+  public var description: String
 
-  init(name: String, description: String) {
+  public init(name: String, description: String) {
     self.name = name
     self.description = description
   }
 
-  static func == (lhs: Exercise, rhs: Exercise) -> Bool {
+  public static func == (lhs: Exercise, rhs: Exercise) -> Bool {
     return lhs.name == rhs.name
       && lhs.description == rhs.description
   }

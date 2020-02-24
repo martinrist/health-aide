@@ -57,6 +57,16 @@
                ReferencedContainer = "container:HealthAide.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "29BDE5AD240474250057C0F4"
+               BuildableName = "HealthAideFrameworkTests.xctest"
+               BlueprintName = "HealthAideFrameworkTests"
+               ReferencedContainer = "container:HealthAide.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
