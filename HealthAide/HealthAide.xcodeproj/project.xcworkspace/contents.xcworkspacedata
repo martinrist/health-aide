@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/mlr/Documents/devel/health-aide/WorkoutDiary/HealthAide.xcodeproj">
    </FileRef>
 </Workspace>

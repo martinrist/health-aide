@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3610BE712355E98100BC3EFF /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE702355E98100BC3EFF /* Exercise.swift */; };
+		295F499F2404682300F99CB5 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE702355E98100BC3EFF /* Exercise.swift */; };
 		3610BE732355EA6C00BC3EFF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE722355EA6C00BC3EFF /* DataModel.swift */; };
 		3610BE752355ECDD00BC3EFF /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE742355ECDD00BC3EFF /* ExerciseListViewController.swift */; };
 		3610BE772355F2FA00BC3EFF /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE762355F2FA00BC3EFF /* DataModelTests.swift */; };
@@ -43,22 +43,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3610BE702355E98100BC3EFF /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = WorkoutDiary/Model/Exercise.swift; sourceTree = SOURCE_ROOT; };
+		3610BE702355E98100BC3EFF /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		3610BE722355EA6C00BC3EFF /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		3610BE742355ECDD00BC3EFF /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
 		3610BE762355F2FA00BC3EFF /* DataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelTests.swift; sourceTree = "<group>"; };
 		3610BE7A23560F8900BC3EFF /* ExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewController.swift; sourceTree = "<group>"; };
 		3649B3852360706B00A8EB82 /* RoutineListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineListViewController.swift; sourceTree = "<group>"; };
 		3649B387236071AA00A8EB82 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
-		3663CE3B23268B66009E8BCC /* WorkoutDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3663CE3B23268B66009E8BCC /* Health Aide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Aide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3663CE3E23268B66009E8BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3663CE4323268B66009E8BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3663CE4823268B66009E8BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3663CE4B23268B66009E8BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3663CE4D23268B66009E8BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3663CE5223268B66009E8BCC /* WorkoutDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3663CE5223268B66009E8BCC /* HealthAideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthAideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3663CE5823268B66009E8BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3663CE5D23268B66009E8BCC /* WorkoutDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3663CE5D23268B66009E8BCC /* HealthAideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthAideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3663CE6123268B66009E8BCC /* WorkoutDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDiaryUITests.swift; sourceTree = "<group>"; };
 		3663CE6323268B66009E8BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36AECEE423608A4A0056628F /* RoutineDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineDetailViewController.swift; sourceTree = "<group>"; };
@@ -139,9 +139,9 @@
 		3663CE3223268B66009E8BCC = {
 			isa = PBXGroup;
 			children = (
-				3663CE3D23268B66009E8BCC /* WorkoutDiary */,
-				3663CE5523268B66009E8BCC /* WorkoutDiaryTests */,
-				3663CE6023268B66009E8BCC /* WorkoutDiaryUITests */,
+				3663CE3D23268B66009E8BCC /* HealthAide */,
+				3663CE5523268B66009E8BCC /* HealthAideTests */,
+				3663CE6023268B66009E8BCC /* HealthAideUITests */,
 				3663CE3C23268B66009E8BCC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,14 +149,14 @@
 		3663CE3C23268B66009E8BCC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3663CE3B23268B66009E8BCC /* WorkoutDiary.app */,
-				3663CE5223268B66009E8BCC /* WorkoutDiaryTests.xctest */,
-				3663CE5D23268B66009E8BCC /* WorkoutDiaryUITests.xctest */,
+				3663CE3B23268B66009E8BCC /* Health Aide.app */,
+				3663CE5223268B66009E8BCC /* HealthAideTests.xctest */,
+				3663CE5D23268B66009E8BCC /* HealthAideUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3663CE3D23268B66009E8BCC /* WorkoutDiary */ = {
+		3663CE3D23268B66009E8BCC /* HealthAide */ = {
 			isa = PBXGroup;
 			children = (
 				3643224F2350974000A5A7E2 /* Views */,
@@ -165,33 +165,33 @@
 				364322532350977600A5A7E2 /* Resources */,
 				364322522350976800A5A7E2 /* Support */,
 			);
-			path = WorkoutDiary;
+			path = HealthAide;
 			sourceTree = "<group>";
 		};
-		3663CE5523268B66009E8BCC /* WorkoutDiaryTests */ = {
+		3663CE5523268B66009E8BCC /* HealthAideTests */ = {
 			isa = PBXGroup;
 			children = (
 				3663CE5823268B66009E8BCC /* Info.plist */,
 				3610BE762355F2FA00BC3EFF /* DataModelTests.swift */,
 			);
-			path = WorkoutDiaryTests;
+			path = HealthAideTests;
 			sourceTree = "<group>";
 		};
-		3663CE6023268B66009E8BCC /* WorkoutDiaryUITests */ = {
+		3663CE6023268B66009E8BCC /* HealthAideUITests */ = {
 			isa = PBXGroup;
 			children = (
 				3663CE6123268B66009E8BCC /* WorkoutDiaryUITests.swift */,
 				3663CE6323268B66009E8BCC /* Info.plist */,
 			);
-			path = WorkoutDiaryUITests;
+			path = HealthAideUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3663CE3A23268B66009E8BCC /* WorkoutDiary */ = {
+		3663CE3A23268B66009E8BCC /* HealthAide */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3663CE6623268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutDiary" */;
+			buildConfigurationList = 3663CE6623268B66009E8BCC /* Build configuration list for PBXNativeTarget "HealthAide" */;
 			buildPhases = (
 				3663CE3723268B66009E8BCC /* Sources */,
 				364322592350C33E00A5A7E2 /* Run Swiftlint */,
@@ -202,14 +202,14 @@
 			);
 			dependencies = (
 			);
-			name = WorkoutDiary;
+			name = HealthAide;
 			productName = WorkoutDiary;
-			productReference = 3663CE3B23268B66009E8BCC /* WorkoutDiary.app */;
+			productReference = 3663CE3B23268B66009E8BCC /* Health Aide.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3663CE5123268B66009E8BCC /* WorkoutDiaryTests */ = {
+		3663CE5123268B66009E8BCC /* HealthAideTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3663CE6923268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutDiaryTests" */;
+			buildConfigurationList = 3663CE6923268B66009E8BCC /* Build configuration list for PBXNativeTarget "HealthAideTests" */;
 			buildPhases = (
 				3663CE4E23268B66009E8BCC /* Sources */,
 				3663CE4F23268B66009E8BCC /* Frameworks */,
@@ -220,14 +220,14 @@
 			dependencies = (
 				3663CE5423268B66009E8BCC /* PBXTargetDependency */,
 			);
-			name = WorkoutDiaryTests;
+			name = HealthAideTests;
 			productName = WorkoutDiaryTests;
-			productReference = 3663CE5223268B66009E8BCC /* WorkoutDiaryTests.xctest */;
+			productReference = 3663CE5223268B66009E8BCC /* HealthAideTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3663CE5C23268B66009E8BCC /* WorkoutDiaryUITests */ = {
+		3663CE5C23268B66009E8BCC /* HealthAideUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3663CE6C23268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutDiaryUITests" */;
+			buildConfigurationList = 3663CE6C23268B66009E8BCC /* Build configuration list for PBXNativeTarget "HealthAideUITests" */;
 			buildPhases = (
 				3663CE5923268B66009E8BCC /* Sources */,
 				3663CE5A23268B66009E8BCC /* Frameworks */,
@@ -238,9 +238,9 @@
 			dependencies = (
 				3663CE5F23268B66009E8BCC /* PBXTargetDependency */,
 			);
-			name = WorkoutDiaryUITests;
+			name = HealthAideUITests;
 			productName = WorkoutDiaryUITests;
-			productReference = 3663CE5D23268B66009E8BCC /* WorkoutDiaryUITests.xctest */;
+			productReference = 3663CE5D23268B66009E8BCC /* HealthAideUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -266,7 +266,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3663CE3623268B66009E8BCC /* Build configuration list for PBXProject "WorkoutDiary" */;
+			buildConfigurationList = 3663CE3623268B66009E8BCC /* Build configuration list for PBXProject "HealthAide" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -279,9 +279,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3663CE3A23268B66009E8BCC /* WorkoutDiary */,
-				3663CE5123268B66009E8BCC /* WorkoutDiaryTests */,
-				3663CE5C23268B66009E8BCC /* WorkoutDiaryUITests */,
+				3663CE3A23268B66009E8BCC /* HealthAide */,
+				3663CE5123268B66009E8BCC /* HealthAideTests */,
+				3663CE5C23268B66009E8BCC /* HealthAideUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -339,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				295F499F2404682300F99CB5 /* Exercise.swift in Sources */,
 				3610BE752355ECDD00BC3EFF /* ExerciseListViewController.swift in Sources */,
 				3649B388236071AA00A8EB82 /* Routine.swift in Sources */,
 				3610BE732355EA6C00BC3EFF /* DataModel.swift in Sources */,
@@ -346,7 +347,6 @@
 				36AECEE523608A4A0056628F /* RoutineDetailViewController.swift in Sources */,
 				3649B3862360706B00A8EB82 /* RoutineListViewController.swift in Sources */,
 				3610BE7B23560F8900BC3EFF /* ExerciseDetailViewController.swift in Sources */,
-				3610BE712355E98100BC3EFF /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,12 +374,12 @@
 /* Begin PBXTargetDependency section */
 		3663CE5423268B66009E8BCC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3663CE3A23268B66009E8BCC /* WorkoutDiary */;
+			target = 3663CE3A23268B66009E8BCC /* HealthAide */;
 			targetProxy = 3663CE5323268B66009E8BCC /* PBXContainerItemProxy */;
 		};
 		3663CE5F23268B66009E8BCC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3663CE3A23268B66009E8BCC /* WorkoutDiary */;
+			target = 3663CE3A23268B66009E8BCC /* HealthAide */;
 			targetProxy = 3663CE5E23268B66009E8BCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -526,14 +526,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = NRU5YEF35L;
-				INFOPLIST_FILE = WorkoutDiary/Support/Info.plist;
+				INFOPLIST_FILE = HealthAide/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.WorkoutDiary;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Workout Diary (Development)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.HealthAide;
+				PRODUCT_NAME = "Health Aide";
+				PROVISIONING_PROFILE_SPECIFIER = "HealthAide (Development)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -545,14 +545,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = NRU5YEF35L;
-				INFOPLIST_FILE = WorkoutDiary/Support/Info.plist;
+				INFOPLIST_FILE = HealthAide/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.WorkoutDiary;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Workout Diary (Development)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinrist.HealthAide;
+				PRODUCT_NAME = "Health Aide";
+				PROVISIONING_PROFILE_SPECIFIER = "HealthAide (Development)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -575,7 +575,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkoutDiary.app/WorkoutDiary";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthAide.app/HealthAide";
 			};
 			name = Debug;
 		};
@@ -596,7 +596,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkoutDiary.app/WorkoutDiary";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthAide.app/HealthAide";
 			};
 			name = Release;
 		};
@@ -643,7 +643,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3663CE3623268B66009E8BCC /* Build configuration list for PBXProject "WorkoutDiary" */ = {
+		3663CE3623268B66009E8BCC /* Build configuration list for PBXProject "HealthAide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3663CE6423268B66009E8BCC /* Debug */,
@@ -652,7 +652,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3663CE6623268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutDiary" */ = {
+		3663CE6623268B66009E8BCC /* Build configuration list for PBXNativeTarget "HealthAide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3663CE6723268B66009E8BCC /* Debug */,
@@ -661,7 +661,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3663CE6923268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutDiaryTests" */ = {
+		3663CE6923268B66009E8BCC /* Build configuration list for PBXNativeTarget "HealthAideTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3663CE6A23268B66009E8BCC /* Debug */,
@@ -670,7 +670,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3663CE6C23268B66009E8BCC /* Build configuration list for PBXNativeTarget "WorkoutDiaryUITests" */ = {
+		3663CE6C23268B66009E8BCC /* Build configuration list for PBXNativeTarget "HealthAideUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3663CE6D23268B66009E8BCC /* Debug */,
