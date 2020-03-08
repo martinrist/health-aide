@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2908E0AE24155E2E004C0A94 /* Pace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2908E0AD24155E2E004C0A94 /* Pace.swift */; };
+		2908E0AF24155E3B004C0A94 /* Pace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2908E0AD24155E2E004C0A94 /* Pace.swift */; };
+		2908E0B024155E3B004C0A94 /* Pace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2908E0AD24155E2E004C0A94 /* Pace.swift */; };
 		295F499F2404682300F99CB5 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE702355E98100BC3EFF /* Exercise.swift */; };
 		29A70492240471830050C1E4 /* HealthAideFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A70490240471830050C1E4 /* HealthAideFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29A70495240471830050C1E4 /* HealthAideFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A7048E240471830050C1E4 /* HealthAideFramework.framework */; };
@@ -78,6 +81,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2908E0AD24155E2E004C0A94 /* Pace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pace.swift; sourceTree = "<group>"; };
 		29A7048E240471830050C1E4 /* HealthAideFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HealthAideFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A70490240471830050C1E4 /* HealthAideFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthAideFramework.h; sourceTree = "<group>"; };
 		29A70491240471830050C1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -207,6 +211,7 @@
 				3610BE702355E98100BC3EFF /* Exercise.swift */,
 				3610BE722355EA6C00BC3EFF /* DataModel.swift */,
 				3649B387236071AA00A8EB82 /* Routine.swift */,
+				2908E0AD24155E2E004C0A94 /* Pace.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -508,6 +513,7 @@
 			files = (
 				29BDE5A7240472B10057C0F4 /* Exercise.swift in Sources */,
 				29BDE5A8240472B10057C0F4 /* DataModel.swift in Sources */,
+				2908E0AE24155E2E004C0A94 /* Pace.swift in Sources */,
 				29BDE5A9240472B10057C0F4 /* Routine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +535,7 @@
 				3649B388236071AA00A8EB82 /* Routine.swift in Sources */,
 				3610BE732355EA6C00BC3EFF /* DataModel.swift in Sources */,
 				3663CE3F23268B66009E8BCC /* AppDelegate.swift in Sources */,
+				2908E0AF24155E3B004C0A94 /* Pace.swift in Sources */,
 				36AECEE523608A4A0056628F /* RoutineDetailViewController.swift in Sources */,
 				3649B3862360706B00A8EB82 /* RoutineListViewController.swift in Sources */,
 				3610BE7B23560F8900BC3EFF /* ExerciseDetailViewController.swift in Sources */,
@@ -543,6 +550,7 @@
 				3610BE772355F2FA00BC3EFF /* DataModelTests.swift in Sources */,
 				36AECEE6236090790056628F /* Routine.swift in Sources */,
 				3610BE782355F31D00BC3EFF /* DataModel.swift in Sources */,
+				2908E0B024155E3B004C0A94 /* Pace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
