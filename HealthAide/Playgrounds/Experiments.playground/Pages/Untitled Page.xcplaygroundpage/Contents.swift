@@ -25,6 +25,23 @@ let tenMinKm: Pace = 10
 fiveMinKm.averaged(with: tenMinKm)
 
 
+// Equality & Comparison
+
+let anotherFiveMinuteKm = Pace.perKm(minutes: 5)
+let eightMinuteMile = Pace.perMile(minutes: 8)
+fiveMinKm == anotherFiveMinuteKm
+fiveMinKm == eightMinuteMile
+fiveMinKm == prettyFast
+
+let fourMinKm = Pace.perKm(minutes: 4)
+let sixMinKm = Pace.perKm(minutes: 6)
+
+// Less means slower
+fiveMinKm < sixMinKm
+fiveMinKm < fourMinKm
+
+fiveMinKm > sixMinKm
+
 // Faster and slower
 
 let twoMinKm = Pace.perKm(minutes: 2)

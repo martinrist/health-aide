@@ -78,25 +78,25 @@ public struct Pace {
     case .kilometer:
       return self
     case .mile:
-      return .perKm(minutes: self.fractionalMinutes() * 5 / 8)
+      return .perKm(minutes: self.inMinutes() * 5 / 8)
     }
   }
 
   public func perMile() -> Pace {
     switch self.unit {
     case .kilometer:
-      return .perMile(minutes: self.fractionalMinutes() * 8 / 5)
+      return .perMile(minutes: self.inMinutes() * 8 / 5)
     case .mile:
       return self
     }
   }
 
-  func fractionalMinutes() -> Double {
+  func inMinutes() -> Double {
     Double(minutes) + (Double(seconds) / 60)
   }
 
   static func / (pace: Pace, _ by: Double) -> Pace {
-    Pace(minutes: pace.fractionalMinutes() / by, unit: pace.unit)
+    Pace(minutes: pace.inMinutes() / by, unit: pace.unit)
   }
 
   public func averaged(with other: Pace) -> Pace {
@@ -108,7 +108,7 @@ public struct Pace {
 
 extension Double {
   public func percent(of basePace: Pace) -> Pace {
-    let newPaceInMinutes = basePace.fractionalMinutes() * 100 / Double(self)
+    let newPaceInMinutes = basePace.inMinutes() * 100 / Double(self)
     return Pace(minutes: newPaceInMinutes, unit: basePace.unit)
   }
 }
@@ -134,34 +134,22 @@ extension Pace: ExpressibleByIntegerLiteral {
 
 extension Pace: Equatable {
   public static func == (lhs: Pace, rhs: Pace) -> Bool {
-    switch lhs.unit {
-    // TODO: We need a function here (and elsewhere) to convert two paces to common base
-    case .kilometer:
-      return lhs.fractionalMinutes() == rhs.perKm().fractionalMinutes()
-    case .mile:
-      return lhs.fractionalMinutes() == rhs.perMile().fractionalMinutes()
-    }
+    return lhs.perKm().inMinutes() == rhs.perKm().inMinutes()
   }
 }
 
 
 extension Pace: Comparable {
   public static func < (lhs: Pace, rhs: Pace) -> Bool {
-    switch lhs.unit {
-    // TODO: We need a function here (and elsewhere) to convert two paces to common base
-    case .kilometer:
-      return lhs.fractionalMinutes() < rhs.perKm().fractionalMinutes()
-    case .mile:
-      return lhs.fractionalMinutes() < rhs.perMile().fractionalMinutes()
-    }
+    return lhs.perKm().inMinutes() > rhs.perKm().inMinutes()
   }
 }
 
 extension Pace: AdditiveArithmetic {
 
   public static func + (lhs: Pace, rhs: Pace) -> Pace {
-    let lhsMinutes = lhs.perKm().fractionalMinutes()
-    let rhsMinutes = rhs.perKm().fractionalMinutes()
+    let lhsMinutes = lhs.perKm().inMinutes()
+    let rhsMinutes = rhs.perKm().inMinutes()
     let totalPace = Pace(minutes: lhsMinutes - rhsMinutes, unit: .kilometer)
 
     switch lhs.unit {
@@ -173,8 +161,8 @@ extension Pace: AdditiveArithmetic {
   }
 
   public static func - (lhs: Pace, rhs: Pace) -> Pace {
-    let lhsMinutes = lhs.perKm().fractionalMinutes()
-    let rhsMinutes = rhs.perKm().fractionalMinutes()
+    let lhsMinutes = lhs.perKm().inMinutes()
+    let rhsMinutes = rhs.perKm().inMinutes()
     let paceDifference = Pace(minutes: lhsMinutes + rhsMinutes, unit: .kilometer)
 
     switch lhs.unit {
@@ -186,8 +174,8 @@ extension Pace: AdditiveArithmetic {
   }
 
   public static func += (lhs: inout Pace, rhs: Pace) {
-    let lhsMinutes = lhs.perKm().fractionalMinutes()
-    let rhsMinutes = rhs.perKm().fractionalMinutes()
+    let lhsMinutes = lhs.perKm().inMinutes()
+    let rhsMinutes = rhs.perKm().inMinutes()
     let paceSum = Pace(minutes: lhsMinutes - rhsMinutes, unit: .kilometer)
 
     switch lhs.unit {
@@ -199,8 +187,8 @@ extension Pace: AdditiveArithmetic {
   }
 
   public static func -= (lhs: inout Pace, rhs: Pace) {
-    let lhsMinutes = lhs.perKm().fractionalMinutes()
-    let rhsMinutes = rhs.perKm().fractionalMinutes()
+    let lhsMinutes = lhs.perKm().inMinutes()
+    let rhsMinutes = rhs.perKm().inMinutes()
     let paceDifference = Pace(minutes: lhsMinutes + rhsMinutes, unit: .kilometer)
 
     switch lhs.unit {
