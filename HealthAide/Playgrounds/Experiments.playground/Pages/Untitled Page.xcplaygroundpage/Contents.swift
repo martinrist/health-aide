@@ -23,3 +23,10 @@ let surgePace = 90.percent(of: fiveKPace)
 let tenMinKm: Pace = 10
 
 fiveMinKm.averaged(with: tenMinKm)
+
+
+// Faster and slower
+
+let twoMinKm = Pace.perKm(minutes: 2)
+let twoMinFasterThanFiveMin = fiveMinKm + twoMinKm
+let twoMinSlowerThanFiveMin = fiveMinKm - twoMinKm

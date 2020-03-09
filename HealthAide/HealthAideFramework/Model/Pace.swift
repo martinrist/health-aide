@@ -162,7 +162,7 @@ extension Pace: AdditiveArithmetic {
   public static func + (lhs: Pace, rhs: Pace) -> Pace {
     let lhsMinutes = lhs.perKm().fractionalMinutes()
     let rhsMinutes = rhs.perKm().fractionalMinutes()
-    let totalPace = Pace(minutes: lhsMinutes + rhsMinutes, unit: .kilometer)
+    let totalPace = Pace(minutes: lhsMinutes - rhsMinutes, unit: .kilometer)
 
     switch lhs.unit {
     case .kilometer:
@@ -175,7 +175,7 @@ extension Pace: AdditiveArithmetic {
   public static func - (lhs: Pace, rhs: Pace) -> Pace {
     let lhsMinutes = lhs.perKm().fractionalMinutes()
     let rhsMinutes = rhs.perKm().fractionalMinutes()
-    let paceDifference = Pace(minutes: lhsMinutes - rhsMinutes, unit: .kilometer)
+    let paceDifference = Pace(minutes: lhsMinutes + rhsMinutes, unit: .kilometer)
 
     switch lhs.unit {
     case .kilometer:
@@ -188,7 +188,7 @@ extension Pace: AdditiveArithmetic {
   public static func += (lhs: inout Pace, rhs: Pace) {
     let lhsMinutes = lhs.perKm().fractionalMinutes()
     let rhsMinutes = rhs.perKm().fractionalMinutes()
-    let paceSum = Pace(minutes: lhsMinutes + rhsMinutes, unit: .kilometer)
+    let paceSum = Pace(minutes: lhsMinutes - rhsMinutes, unit: .kilometer)
 
     switch lhs.unit {
     case .kilometer:
@@ -201,7 +201,7 @@ extension Pace: AdditiveArithmetic {
   public static func -= (lhs: inout Pace, rhs: Pace) {
     let lhsMinutes = lhs.perKm().fractionalMinutes()
     let rhsMinutes = rhs.perKm().fractionalMinutes()
-    let paceDifference = Pace(minutes: lhsMinutes - rhsMinutes, unit: .kilometer)
+    let paceDifference = Pace(minutes: lhsMinutes + rhsMinutes, unit: .kilometer)
 
     switch lhs.unit {
     case .kilometer:
