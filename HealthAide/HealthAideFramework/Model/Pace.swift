@@ -30,7 +30,7 @@ public struct Pace {
 
   init(minutes: Double, unit: Unit) {
     let (minutesComponent, secondsComponent)
-      = Pace.fromFractionalMinutes(minutes: minutes)
+      = Pace.fromMinutes(minutes: minutes)
     self.minutes = minutesComponent
     self.seconds = secondsComponent
     self.unit = unit
@@ -45,7 +45,7 @@ public struct Pace {
 
   public static func perKm(minutes: Double) -> Pace {
     let (integerMinutes, integerSeconds)
-      = fromFractionalMinutes(minutes: minutes)
+      = fromMinutes(minutes: minutes)
     return Pace.perKm(minutes: integerMinutes, seconds: integerSeconds)
   }
 
@@ -55,15 +55,15 @@ public struct Pace {
 
   public static func perMile(minutes: Double) -> Pace {
     let (integerMinutes, integerSeconds)
-      = fromFractionalMinutes(minutes: minutes)
+      = fromMinutes(minutes: minutes)
     return Pace.perMile(minutes: integerMinutes, seconds: integerSeconds)
   }
 
-  private static func toFractionalMinutes(minutes: Int, seconds: Int) -> Double {
+  private static func toMinutes(minutes: Int, seconds: Int) -> Double {
     Double(minutes) + Double(seconds) / 60
   }
 
-  private static func fromFractionalMinutes(minutes: Double)
+  private static func fromMinutes(minutes: Double)
     -> (minutes: Int, seconds: Int) {
       let integerMinutes = Int(minutes)
       let integerSeconds = Int((minutes - Double(integerMinutes)) * 60)
@@ -124,7 +124,7 @@ extension Pace: ExpressibleByIntegerLiteral {
   public typealias IntegerLiteralType = Double
 
   public init(integerLiteral value: Double) {
-    let (minutes, seconds) = Pace.fromFractionalMinutes(minutes: value)
+    let (minutes, seconds) = Pace.fromMinutes(minutes: value)
     self.minutes = minutes
     self.seconds = seconds
     self.unit = .kilometer
