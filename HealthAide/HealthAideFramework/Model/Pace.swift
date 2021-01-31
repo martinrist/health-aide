@@ -95,6 +95,7 @@ public struct Pace {
     Double(minutes) + (Double(seconds) / 60)
   }
 
+  // swiftlint:disable:next identifier_name
   static func / (pace: Pace, _ by: Double) -> Pace {
     Pace(minutes: pace.inMinutes() / by, unit: pace.unit)
   }

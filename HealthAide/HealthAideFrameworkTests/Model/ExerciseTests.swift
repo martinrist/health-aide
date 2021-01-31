@@ -12,9 +12,9 @@ import HealthAideFramework
 class ExerciseTests: XCTestCase {
 
   func testInitialisation() {
-    let ex = Exercise(name: "name", description: "description")
-    XCTAssertEqual(ex.name, "name")
-    XCTAssertEqual(ex.description, "description")
+    let exercise = Exercise(name: "name", description: "description")
+    XCTAssertEqual(exercise.name, "name")
+    XCTAssertEqual(exercise.description, "description")
   }
 
 }

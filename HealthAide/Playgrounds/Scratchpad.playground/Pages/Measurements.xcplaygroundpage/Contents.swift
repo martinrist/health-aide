@@ -55,18 +55,19 @@ formatter.string(from: Mass(value: 149, unit: .pounds))
 let fiveFiftyOne = Duration.from(minutes: 5, seconds: 51)
 let oneKm = Length(value: 1, unit: .kilometers)
 
+// swiftlint:disable:next todo
 // TODO: This is what we need Ampere for I think
 // fiveFiftyOne / oneKm
 
-
+// swiftlint:disable:next todo
 // TODO: Rewrite these expressions using swift-prelude operators?
 
 let fiveFiftyOnePerKm = Measurement<UnitSpeed>(value: 1000 / fiveFiftyOne.value, unit: .metersPerSecond)
 
-let sixThirtyNinePerKm = Measurement<UnitSpeed>(value: 1000 / (Duration.from(minutes: 6, seconds: 39)).value, unit: .metersPerSecond)
+let sixThirtyNinePerKm = Measurement<UnitSpeed>(
+    value: 1000 / (Duration.from(minutes: 6, seconds: 39)).value,
+    unit: .metersPerSecond)
 
 let midpoint = (fiveFiftyOnePerKm + sixThirtyNinePerKm) / 2
 
 Duration(value: 1000 / midpoint.value, unit: .seconds).convertedToMinutesAndSeconds()
-
-
