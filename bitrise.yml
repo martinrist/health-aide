@@ -55,6 +55,7 @@ workflows:
         - simulator_device: iPhone 8 Plus
         - scheme: $BITRISE_SCHEME
     - cache-push: {}
+    - deploy-to-bitrise-io: {}
 app:
   envs:
   - opts:
