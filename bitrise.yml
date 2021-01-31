@@ -1,0 +1,68 @@
+---
+format_version: '8'
+default_step_lib_source: 'https://github.com/bitrise-io/bitrise-steplib.git'
+project_type: ios
+trigger_map:
+- push_branch: main
+  workflow: deploy
+- push_branch: '*'
+  workflow: primary
+- pull_request_source_branch: '*'
+  workflow: primary
+workflows:
+  deploy:
+    steps:
+    - activate-ssh-key:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone: {}
+    - cache-pull: {}
+    - set-xcode-build-number:
+        inputs:
+        - plist_path: HealthAide/HealthAide/Support/Info.plist
+    - certificate-and-profile-installer: {}
+    - xcode-test:
+        inputs:
+        - project_path: $BITRISE_PROJECT_PATH
+        - simulator_device: iPhone 8 Plus
+        - scheme: $BITRISE_SCHEME
+    - xcode-archive:
+        inputs:
+        - project_path: $BITRISE_PROJECT_PATH
+        - scheme: $BITRISE_SCHEME
+        - export_method: $BITRISE_EXPORT_METHOD
+    - deploy-to-bitrise-io:
+        inputs:
+        - notify_email_list: ''
+    - cache-push: {}
+  primary:
+    steps:
+    - activate-ssh-key:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone: {}
+    - cache-pull: {}
+    - certificate-and-profile-installer: {}
+    - set-xcode-build-number:
+        inputs:
+        - plist_path: HealthAide/HealthAide/Support/Info.plist
+    - swiftlint:
+        inputs:
+        - strict: 'yes'
+        - lint_config_file: $BITRISE_SOURCE_DIR/WorkoutDiary/.swiftlint.yml
+        - linting_path: $BITRISE_SOURCE_DIR
+    - xcode-test:
+        inputs:
+        - project_path: $BITRISE_PROJECT_PATH
+        - simulator_device: iPhone 8 Plus
+        - scheme: $BITRISE_SCHEME
+    - cache-push: {}
+app:
+  envs:
+  - opts:
+      is_expand: false
+    BITRISE_PROJECT_PATH: HealthAide/HealthAide.xcodeproj
+  - opts:
+      is_expand: false
+    BITRISE_SCHEME: HealthAide
+  - opts:
+      is_expand: false
+    BITRISE_EXPORT_METHOD: development
