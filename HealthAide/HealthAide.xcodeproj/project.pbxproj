@@ -85,7 +85,7 @@
 		29A7048E240471830050C1E4 /* HealthAideFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HealthAideFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A70490240471830050C1E4 /* HealthAideFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthAideFramework.h; sourceTree = "<group>"; };
 		29A70491240471830050C1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		29A7049C240472180050C1E4 /* Experiments.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Experiments.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		29A7049C240472180050C1E4 /* Scratchpad.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Scratchpad.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		29BDE5AE240474250057C0F4 /* HealthAideFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthAideFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29BDE5B2240474250057C0F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29BDE5B9240474430057C0F4 /* ExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTests.swift; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 		29A7049B240472000050C1E4 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				29A7049C240472180050C1E4 /* Experiments.playground */,
+				29A7049C240472180050C1E4 /* Scratchpad.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
