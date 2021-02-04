@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		29BDE5A8240472B10057C0F4 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE722355EA6C00BC3EFF /* DataModel.swift */; };
 		29BDE5A9240472B10057C0F4 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649B387236071AA00A8EB82 /* Routine.swift */; };
 		29BDE5BA240474430057C0F4 /* ExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BDE5B9240474430057C0F4 /* ExerciseTests.swift */; };
+		2F1B1D5D25CC64CD00084C87 /* Tagged in Frameworks */ = {isa = PBXBuildFile; productRef = 2F1B1D5C25CC64CD00084C87 /* Tagged */; };
 		3610BE732355EA6C00BC3EFF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE722355EA6C00BC3EFF /* DataModel.swift */; };
 		3610BE752355ECDD00BC3EFF /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE742355ECDD00BC3EFF /* ExerciseListViewController.swift */; };
 		3610BE772355F2FA00BC3EFF /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3610BE762355F2FA00BC3EFF /* DataModelTests.swift */; };
@@ -129,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F1B1D5D25CC64CD00084C87 /* Tagged in Frameworks */,
 				29A70495240471830050C1E4 /* HealthAideFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +355,9 @@
 				29A70494240471830050C1E4 /* PBXTargetDependency */,
 			);
 			name = HealthAide;
+			packageProductDependencies = (
+				2F1B1D5C25CC64CD00084C87 /* Tagged */,
+			);
 			productName = WorkoutDiary;
 			productReference = 3663CE3B23268B66009E8BCC /* HealthAide.app */;
 			productType = "com.apple.product-type.application";
@@ -431,6 +436,9 @@
 				Base,
 			);
 			mainGroup = 3663CE3223268B66009E8BCC;
+			packageReferences = (
+				2F1B1D5B25CC64CD00084C87 /* XCRemoteSwiftPackageReference "swift-tagged" */,
+			);
 			productRefGroup = 3663CE3C23268B66009E8BCC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -999,6 +1007,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F1B1D5B25CC64CD00084C87 /* XCRemoteSwiftPackageReference "swift-tagged" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-tagged.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F1B1D5C25CC64CD00084C87 /* Tagged */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F1B1D5B25CC64CD00084C87 /* XCRemoteSwiftPackageReference "swift-tagged" */;
+			productName = Tagged;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3663CE3323268B66009E8BCC /* Project object */;
 }
